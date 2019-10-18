@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head><title> esempio </title></head>
+<body>
+
+<!--<p id="display"> Ciao Mondo, Ciao Pikkettaro Pennell Che Fa Il Call... </p> -->
+
+<script>
+
+//let testo = document.getElementById('display').innerHTML;
+//let pattern0 = /o/;                 //Trova La o Nella Frase Nel tag <p>
+//let alternativa = new RegExp('o');  //Trova La o Nella Frase Nel tag <p>
+
+//OUT : true ---> (Ciao Mondo, Ciao Pikkettaro Pennell Che Fa Il Call...)
+//alert(pattern0.test(testo));
+
+let testo = document.getElementById('display').innerHTML;
+let pattern0 = /w/;                   //Non Trova La o Nella Frase Nel tag <p>
+let alternativa = new RegExp('w');    //Non Trova La o Nella Frase Nel tag <p>
+
+//OUT : false ---> (Ciao Mondo, Ciao Pikkettaro Pennell Che Fa Il Call...)
+alert(pattern0.test(testo));
+
+</script>
+
+</body>
+</html>

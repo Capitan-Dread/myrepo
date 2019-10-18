@@ -1,0 +1,172 @@
+
+https://www.mrwebmaster.it/php/utilizzare-funzione-crypt-php_6603.html
+
+--------------------------------------------------------------------------
+
+
+
+
+
+                      Utilizzare la funzione Crypt di PHP
+
+
+
+
+
+PHP offre una comoda funzione per il criptaggio molto utile, ad es., a chi
+vuole sviluppare un sistema di login o comunque vuole archiviare informazioni
+sensibili.
+
+Per comprendere l'importanza di questa funzione si pensi, ad es., ad una delle
+tante applicazioni che si trovano in Rete che hanno la cattiva abitudine di
+salvare la password di amministrazione all'interno di un banale file di testo
+(password.txt)... se la password non fose criptata, infatti, chiunque sapesse
+il nome del file txt e la sua locazione potrebbe visualizzare con estrema
+facilità la password da usare!
+
+La funzione in questione è Crypt(). Ecco la sintassi:
+
+Continua dopo la pubblicità...
+
+crypt ( stringa_da_criptare, salt )
+
+il salt è facoltativo e consiste, in poche parole, nella chiave della nostra
+criptazione. Se abbiamo una stringa criptata ed il suo salt possiamo tornare
+alla stringa originale, in caso contrario no.
+Se volesimo, ad esempio, usare come salt le prime tre lettere dell'alfabeto
+avremmo scritto:
+
+<?
+
+// la stringa da criptare...
+
+$mypass = "mrwebmsater"
+
+// il risultato criptato :-)
+
+$mycrypt = crypt($mypass,"abc");
+
+
+echo $mycrypt;
+?>
+
+Atenzione: Se non viene inserito nessun salt, questo viene generato
+automaticamente dal sistema.
+Qui di seguito uno script un po' più complesso per mostrarvi le potenzialità
+della funzione crypt() applicata ad un banale sistema di login basato sul
+semlice inserimento di una password:
+
+<?
+
+// la giusta password
+
+$mypass = "mrwebmaster";
+
+// creiamo un salt con un semplice substr sulla variabile $pass
+
+// attenzione: avremmo potuto usare qualsiasi altra cosa come salt
+
+$mysalt = substr($mypass,0,2);
+
+
+// criptiamo la password con crypt()
+
+$pass_crypt = crypt($mypass,$mysalt);
+
+
+// Recuperiamo la password inserita dall'utente nella querystring
+
+$user_pass = $_GET['p'];
+
+
+// Verifichiamo con Crypt se la password inserita corrisponde a quella criptata
+
+// in sostanza la criptiamo con o stesso salt per vedere se il risultato è uguale
+
+$pass_chk = crypt($user_pass,$mysalt);
+
+
+// Se la password è giusta confermo a video in caso contrario nego l'acesso
+
+if ($user_pass && $pass_crypt == $pass_chk) {
+
+echo "password corretta";
+}
+
+else
+
+{
+
+echo "accesso negato";
+}
+
+?>
+
+Come avete visto per verificare se la password inserita è corretta uso ancora
+crypt() con lo stesso salt con cui ho inizialmene criptato la giusta password e
+poi effettuo delle banali verifiche per vedere se la giusta password criptata
+($pass_crypt) è uguale o meno alla password inserita dall'utente e
+successivamente criptata ($pass_chk).
+
+Ovviamente i codici che abbiamo inserito nel nostro tutorial hanno un semplice
+valore didattico, tuttavia le applicazioni concrete della funzione crypt() sono
+davvero tantissime... lascio, quindi, a voi il compito di applicare al meglio
+quanto appreso. Alla prossima
+
+Naviga tra i contenuti
+
+← Leggere il contenuto di una cartella con PHP
+→ Lavorare con PHP e il protocollo FTP
+
+Ti potrebbero interessare...
+
+Commenti
+
+I commenti sono sottoposti alle linee guida di moderazione e prima di essere
+visibili devono essere approvati da un moderatore.
+
+  • Facebook
+  • Twitter
+  • YouTube
+  • Feed RSS
+
+Frequenta i nostri corsi
+
+  • Corso LinuxCorso Linux
+    Guida completa al sistema open-source. A partire da 39 €
+  • Corso MySQLCorso MySQL
+    Gestione del database open-source. A partire da 39 €
+  • Corso PHPCorso PHP
+    Creare siti web dinamici avanzati con PHP e MySQL. A partire da 49 €
+
+Vedi anche...
+
+  • Errori PHP Undefined index e Undefined offset: cosa sono e come risolverli
+  • Form PHP: gestire i dati inseriti nei moduli del sito
+  • Gestire le dipendenze in PHP con Composer
+  • PHP cURL: interagire con pagine web e risorse remote
+  • Un sistema di permessi in PHP con operatori Bitwise
+
+Guide
+
+  • Guida CodeIgniter
+  • Guida PHP
+  • Guida PHP e MySQL
+  • Guida PhpMyAdmin
+
+Mr. Webmaster
+
+  • RSS
+  • Contattaci
+  • Torna su
+
+IKIweb
+© 2003 - 2019 Mr. Webmaster
+Mr. Webmaster ® è un marchio registrato.
+E' vietata ogni forma di riproduzione.
+IKIweb Internet Media S.r.l. - P.IVA 02848390122
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Parliamo di noi: chi siamo / cronologia
+Contatti: pubblicità / contattaci / segnala abusi
+Note Legali: condizioni d'uso / privacy / cookie
+Altro: sondaggi / feed

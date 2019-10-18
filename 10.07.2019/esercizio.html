@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head><title> Esercizio </title></head>
+<body>
+
+<p id="display"> Esempio </p>
+
+<script>
+
+/** METODI PER STAMPARE DATA IN TEMPO REALE */
+
+//OUTPUT : Wed Jul 10 2019 09:58:02 GMT+0200 (Ora legale dell’Europa centrale)
+//document.getElementById('display').innerHTML = Date();
+
+let data = new Date();
+//alert(data);
+//alert(data.getDate()); //OUT : 10 = giorno del mese
+//alert(data.getDay()); //OUT : 3 = mercoledi (terzo giorno della settimana)
+//alert(data.getMonth()); // OUT : 6 = mese (js inizia a contare gennaio come 0 mese
+                                 //e febbraio come primo del mese)
+                                           
+//alert(data.getFullYear()); //OUT : 2019 (Stampa l' anno)
+//alert(data.getHours());      //OUT : 10 (Stampa L' Ora)
+//alert(data.getMinutes());    //OUT : 51 (Stampa I Minuti)
+//alert(data.getSeconds());    //OUT : 47 (Stampa I Secondi)
+
+/****************************************************************************/
+
+//data.setDate(4);
+//alert(data);
+
+data.setMonth(6); //OUT : 3 = mercoledi (terzo giorno della settimana)
+alert(data.setDay);
+//alert(data.setMonth()); // OUT : 6 = mese (js inizia a contare gennaio come 0 mese
+                                 //e febbraio come primo del mese)
+                                           
+//alert(data.setFullYear()); //OUT : 2019 (Stampa l' anno)
+//alert(data.setHours());      //OUT : 10 (Stampa L' Ora)
+//alert(data.setMinutes());    //OUT : 51 (Stampa I Minuti)
+//alert(data.setSeconds());    //OUT : 47 (Stampa I Secondi)
+
+</script>
+
+</body>
+</html>

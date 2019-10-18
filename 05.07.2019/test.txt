@@ -1,0 +1,17 @@
+{
+    "checklist": [
+        {
+            "elemento": {
+                "Nome": "Guido",
+                "Cognome": "Camerlingo"
+            }
+        },
+        {
+            "elemento": {
+                "Nome": "Geek-",
+                "Cognome": "Blog.it"
+            }
+        }
+    ]
+}
+

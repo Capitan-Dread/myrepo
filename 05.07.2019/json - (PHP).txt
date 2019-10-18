@@ -1,0 +1,6 @@
+
+// Ciao Mondo
+ $json = '["Ciao","Mondo"]';
+ $array = json_decode($json);
+
+echo($array[0]); // Ciao

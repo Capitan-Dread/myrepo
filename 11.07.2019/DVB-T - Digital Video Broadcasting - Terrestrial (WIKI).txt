@@ -1,0 +1,386 @@
+
+https://it.wikipedia.org/wiki/DVB-T
+
+------------------------------------------------------------------------
+
+
+
+
+
+                                     DVB-T
+
+
+ 
+
+Diffusione dello standard DVB-T (in blu)
+
+Nelle telecomunicazioni il Digital Video Broadcasting - Terrestrial (DVB-T) è
+lo standard del consorzio europeo DVB per una modalità di trasmissione
+televisiva digitale terrestre.
+
+[ ]
+
+Indice
+
+  • 1 Descrizione
+      □ 1.1 Sistema di trasmissione
+      □ 1.2 Descrizione sistema di ricezione
+  • 2 DVB-T2
+      □ 2.1 DVB-T2 in Italia
+  • 3 Note
+  • 4 Bibliografia
+  • 5 Voci correlate
+  • 6 Altri progetti
+
+Descrizione[modifica | modifica wikitesto]
+
+Sistema di trasmissione[modifica | modifica wikitesto]
+
+            Questa voce o sezione sull'argomento televisione è ritenuta da
+            controllare.
+            Motivo: C'è un riferimento ad una figura, che è necessaria per la
+Voce da     comprensione del testo, ma la figura manca. Probabilmente ci si
+controllare riferisce a questa pagina, che sembra essere stata usata come
+            fonte.
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            Partecipa alla discussione e/o correggi la voce. Segui i
+            suggerimenti del progetto di riferimento.
+
+Con riferimento alla figura, descriviamo le caratteristiche e lo scopo di
+ciascun blocco di elaborazione.
+
+  • Adattamento di MUX e dispersione d'energia: il flusso di trasporto MPEG-2
+    viene identificato come una sequenza di pacchetti dati di lunghezza fissa
+    pari a 188 byte. Con una tecnica chiamata a dispersione d'energia, (
+    scrambling), la sequenza di byte viene quindi non correlata.
+  • Codificatore esterno: un primo livello di protezione viene fornito ai dati
+    trasmessi, usando un codice a blocchi non binario di tipo Reed-Solomon RS
+    (204,188), che permette la correzione di un massimo di 8 byte errati per
+    ogni pacchetto di 188 byte.
+  • Mappatore: questo blocco effettua la modulazione in banda-base digitale
+    della sequenza di bit, producendo una sequenza di simboli. I metodi di
+    modulazione ammessi sono tre: QPSK, 16-QAM, 64-QAM.
+  • Adattamento di trama: i simboli generati dal processo di mappatura sono
+    raccolti in blocchi di lunghezza costante (1512, 3024 o 6048 simboli per
+    blocco). Si genera una trama (frame) di lunghezza pari a 68 blocchi;
+    quattro trame costituiscono una supertrama (superframe).
+  • Segnali pilota e TPS: permette una migliore ricezione del segnale in
+    seguito alla trasmissione sul canale radio terrestre; dei segnali di aiuto
+    vengono inseriti in ogni blocco. I segnali pilota servono in fase di
+    equalizzazione, mentre i segnali TPS (Transmission Parameters Signalling)
+    sono utilizzati per inviare i parametri del segnale trasmesso e per
+    identificare univocamente la cella di trasmissione.
+  • Modulazione OFDM: la sequenza di blocchi è sottoposta ad una operazione di
+    modulazione secondo la tecnica OFDM, utilizzando un numero di portanti pari
+    a 2048 (modo 2k) oppure 8192 (modo 8k). Il modo 4k (4096 portanti) è
+    utilizzato solo in modalità di trasmissione DVB-H.
+  • Inserimento intervallo di guardia: per diminuire la complessità del
+    ricevitore, ciascun blocco modulato in OFDM viene esteso, copiando in testa
+    ad esso la sua parte terminale (tecnica del prefisso ciclico). La durata
+    dell'intervallo di guardia può essere 1/32, 1/16, 1/8 o 1/4 di quella del
+    blocco modulato.
+  • DAC e front-end: il segnale digitale viene opportunamente trasformato in un
+    segnale analogico, grazie ad un convertitore digitale-analogico (DAC,
+    Digital to Analog Converter), ed infine modulato a frequenza radio (VHF o
+    UHF) dal front-end ad RF. La larghezza di banda occupata da ciascun singolo
+    segnale DVB-T è studiata per accomodarsi in canali larghi 5, 6, 7 o 8 MHz.
+
+Descrizione sistema di ricezione[modifica | modifica wikitesto]
+
+Il tipo di modulazione usato (OFDM) è del tutto diverso da quello usato per le
+trasmissioni analogiche (sono presenti molte portanti, anziché una portante per
+il video, una per il colore e una per l'audio), per cui i sintonizzatori
+analogici non possono in alcun modo essere adattati a ricevere questo tipo di
+trasmissione; questo rende necessario l'utilizzo di decoder esterni
+all'apparecchio televisivo, o di televisori dotati dei due tipi di
+sintonizzatore (finché permarrà la situazione di convivenza di segnali
+analogici e digitali).
+
+In ricezione, il set top box contiene tutti i circuiti necessari ad effettuare
+la demodulazione e la decodifica del segnale ricevuto, utilizzando tecniche
+duali, ovvero complementari o inverse, a quelle descritte per la trasmissione.
+
+  • Front-end e ADC: il segnale analogico ad RF viene portato in banda base e
+    trasformato in un segnale digitale, grazie all'uso di un convertitore
+    analogico-digitale (ADC, Analog to Digital Converter).
+  • Sincronizzazione di tempo e di frequenza: nel segnale digitale in
+    banda-base si cercano dei punti che permettano di identificare la posizione
+    delle trame e dei singoli blocchi. Si cerca di correggere anche eventuali
+    imperfezioni sulla frequenza delle componenti del segnale.
+  • Rimozione intervallo di guardia: si elimina il prefisso ciclico.
+  • Demodulazione OFDM
+  • Equalizzazione in frequenza: con l'utilizzo dei segnali pilota si equalizza
+    il segnale ricevuto.
+  • Demappatura
+  • Deinterleaving interno
+  • Decodifica interna: si utilizza l'algoritmo di Viterbi.
+  • Deinterleaving esterno
+  • Decodifica esterna
+  • Riadattamento di MUX
+  • Demultiplazione MPEG-2 e decodifica di sorgente
+
+DVB-T2[modifica | modifica wikitesto]
+
+[220px-DVB-T2_logo]
+ 
+Logo di DVB-T2
+[220px-Harta_r]
+ 
+Diffusione in Europa dello standard DVB-T2 (in blu scuro) rispetto allo
+standard DVB-T (in blu chiaro)
+
+Nel marzo 2006 il DVB decise di migliorare lo standard DVB-T, tanto che nel
+giugno del 2006 venne creato il gruppo di studio TM-T2 (Technical Module on
+Next Generation DVB-T, modulo tecnico sul DVB-T di prossima generazione)
+all'interno del gruppo DVB, al fine di sviluppare uno schema di modulazione
+avanzato adottabile da uno standard televisivo digitale terrestre di seconda
+generazione, con il nome di DVB-T2.
+
+In base ai requisiti commerciali e tecnologici proposti nell'aprile del 2007,
+la prima fase del DVB-T2 sarà destinata a fornire la miglior ricezione
+possibile a ricevitori stazionari (fissi) e portatili (cioè unità
+trasportabili, ma non completamente mobili) usando gli apparati d'antenna
+attuali, mentre una seconda e terza fase studieranno metodi per raggiungere bit
+rate più alti (con nuovi tipi d'antenna) e il problema dei ricevitori mobili.
+Il nuovo sistema sarebbe in grado di fornire un aumento minimo del 30% in
+termini di bit rate utile, a pari condizioni di canale trasmissivo usato per il
+DVB-T. Le tecnologie utilizzate, a grandi linee, saranno le seguenti:
+
+  • Codici a correzione d'errore di tipo LDPC/BCH, in accordo con quanto già
+    avviene nello standard satellitare DVB-S2
+  • Opzione di utilizzo di sistemi MIMO o a diversità d'antenna
+  • Metodiche per ridurre la potenza di picco irradiata all'antenna
+    trasmittente
+  • Più di 8000 portanti: 16.000 e 32.000 portanti permetteranno di minimizzare
+    l'overhead di prefisso ciclico su reti a frequenza singola (nei documenti
+    citati si prospetta un incremento del 50% in termini di bit rate)
+  • Stima del canale migliorata e utilizzo di un numero inferiore di portanti
+    pilota
+  • Aumento del 30% nella distanza tra ripetitori di reti a frequenza singola
+  • Codifica e modulazioni variabili
+  • Multiplazione flessibile che permetterà più transport stream in
+    contemporanea e un incapsulamento dei pacchetti di protocollo IP
+  • I nuovi ricevitori DVB-T2 dovrebbero essere in grado di ricevere segnali
+    DVB-T, ma non l'opposto, a causa delle grandi differenze a livello
+    hardware.
+
+DVB-T2 in Italia[modifica | modifica wikitesto]
+
+In Italia gli apparecchi atti a ricevere servizi radiotelevisivi venduti dalle
+aziende produttrici ai distributori di apparecchiature elettroniche al
+dettaglio sul territorio nazionale integreranno un sintonizzatore digitale per
+la ricezione di programmi in tecnologia DVB-T2 con codifica HEVC^[1]. A partire
+dal 1º gennaio 2017, gli apparecchi atti a ricevere servizi radiotelevisivi
+venduti ai consumatori sul territorio nazionale integrano un sintonizzatore
+digitale per la ricezione di programmi in tecnologia DVB-T2 con codifica HEVC o
+successive evoluzioni approvate nell'ambito dell'Unione internazionale delle
+telecomunicazioni (ITU). I sistemi di ricezione DVB-T2 permettono, di norma,
+anche la retro-compatibilità con il DVB-T. Invece, i decoder e i televisori non
+indicati come compatibili con il DVB-T2 non potranno essere aggiornati al nuovo
+standard con una modifica del software, rendendosi per alcuni necessaria la
+sostituzione o l'uso di un decoder esterno, come avvenuto con l'introduzione
+del DVB-T.
+
+Dal 1º gennaio 2017 è possibile vendere solo televisori con DVB-T2 e con HEVC^
+[1], mentre a partire dal 2020 inizieranno le trasmissioni nel nuovo formato.^
+[2]
+
+Dal 1º luglio 2022 saranno permesse solo le trasmissioni con il nuovo standard.
+^[3]
+
+In data 8 febbraio 2019 l'AgCom delibera il nuovo piano di assegnazione delle
+frequenze del DVB-T2.^[4]
+
+In data 20 Aprile 2019 l'AgCom pubblica la Delibera 129/19/CONS che definisce i
+criteri di conversione dei diritti d’uso delle frequenze in ambito nazionale
+per i canali T2.^[5]
+
+In data 25 Giugno 2019 il Mise Pubblica gli esiti delle consultazioni pubbliche
+sui bandi per i diritti d'suo "T2" e per le graduatorie degli "FSMA" locali.^
+[6]
+
+Note[modifica | modifica wikitesto]
+
+ 1. ^ ^a ^b L'Italia ha deciso: dal 2017 scatta l'obbligo DVB-T2 e HEVC per TV
+    e decoder, in DDay.it, 12 marzo 2015. URL consultato il 2 novembre 2017.
+ 2. ^ Stanno per cambiare le cose col digitale terrestre, in Il Post, 1º
+    novembre 2017. URL consultato il 2 novembre 2017.
+ 3. ^ DECISIONE DEL PARLAMENTO EUROPEO E DEL CONSIGLIO relativa all'uso della
+    banda di frequenza 470-790MHz nell'Unione (PDF), su ec.europa.eu. URL
+    consultato il 1º gennaio 2019.
+ 4. ^ AgCom, Delibera n. 39/19/CONS Piano nazionale di assegnazione delle
+    frequenze da destinare al servizio televisivo digitale terrestre (PNAF), su
+    italiadvbt2.blogspot.ch, 8 febbraio 2019.
+ 5. ^ AgCom, AgCom pubblica la Delibera 129/19/CONS che definisce i criteri di
+    conversione dei diritti d’uso delle frequenze in ambito nazionale per i
+    canali T2., su italiadvbt2.blogspot.ch, 20 Aprile 2019.
+ 6. ^ MISE, MI.S.E: PUBBLICAZIONE ESITI CONSULTAZIONI PUBBLICHE SUI BANDI PER I
+    DIRITTI D'USO T2 E PER LE GRADUATORIE DEGLI FSMA LOCALI., su 
+    italiadvbt2.blogspot.ch, 25 Giugno 2019.
+
+Bibliografia[modifica | modifica wikitesto]
+
+  • ETSI EN 300 744 V1.5.1 (2004-11), Digital Video Broadcasting (DVB); Framing
+    structure, channel coding and modulation for digital terrestrial television
+    , scaricabile dal sito ETSI.
+
+Voci correlate[modifica | modifica wikitesto]
+
+  • Televisione digitale terrestre in Italia
+
+Altri progetti[modifica | modifica wikitesto]
+
+Altri progetti
+
+  • Wikimedia Commons
+
+  • Collabora a Wikimedia Commons Wikimedia Commons contiene immagini o altri
+    file su DVB-T
+
+Altri progetti
+
+  • Wikimedia Commons
+
+  • Collabora a Wikimedia Commons Wikimedia Commons contiene immagini o altri
+    file su DVB-T2
+
+*
+Estratto da "https://it.wikipedia.org/w/index.php?title=DVB-T&oldid=106415133"
+Categoria:
+
+  • Digital Video Broadcasting
+
+Categorie nascoste:
+
+  • Controllare - televisione
+  • Controllare - novembre 2017
+  • Collegamento interprogetto a una categoria di Wikimedia Commons differente
+    da quello di Wikidata
+
+Menu di navigazione
+
+Strumenti personali
+
+  • Accesso non effettuato
+  • discussioni
+  • contributi
+  • registrati
+  • entra
+
+Namespace
+
+  • Voce
+  • Discussione
+
+[ ]
+
+Varianti
+
+Visite
+
+  • Leggi
+  • Modifica
+  • Modifica wikitesto
+  • Cronologia
+
+[ ]
+
+Altro
+
+Ricerca
+
+[                    ][Ricerca][Vai]
+ 
+
+Navigazione
+
+  • Pagina principale
+  • Ultime modifiche
+  • Una voce a caso
+  • Nelle vicinanze
+  • Vetrina
+  • Aiuto
+  • Sportello informazioni
+
+Comunità
+
+  • Portale Comunità
+  • Bar
+  • Il Wikipediano
+  • Fai una donazione
+  • Contatti
+
+Strumenti
+
+  • Puntano qui
+  • Modifiche correlate
+  • Pagine speciali
+  • Link permanente
+  • Informazioni pagina
+  • Elemento Wikidata
+  • Cita questa voce
+
+In altri progetti
+
+  • Wikimedia Commons
+
+Stampa/esporta
+
+  • Crea un libro
+  • Scarica come PDF
+  • Versione stampabile
+
+In altre lingue
+
+  • Български
+  • Català
+  • Čeština
+  • Deutsch
+  • English
+  • Esperanto
+  • Español
+  • Eesti
+  • فارسی
+  • Suomi
+  • Français
+  • עברית
+  • Hrvatski
+  • Magyar
+  • Bahasa Indonesia
+  • Íslenska
+  • 日本語
+  • 한국어
+  • Lietuvių
+  • Bahasa Melayu
+  • Nederlands
+  • Norsk
+  • Polski
+  • Русский
+  • Slovenčina
+  • Slovenščina
+  • Српски / srpski
+  • Svenska
+  • Türkçe
+  • Українська
+  • Vèneto
+  • Tiếng Việt
+  • 中文
+
+Modifica collegamenti
+
+  • Questa pagina è stata modificata per l'ultima volta il 7 lug 2019 alle
+    09:16.
+  • Il testo è disponibile secondo la licenza Creative Commons
+    Attribuzione-Condividi allo stesso modo; possono applicarsi condizioni
+    ulteriori. Vedi le condizioni d'uso per i dettagli.
+
+  • Informativa sulla privacy
+  • Informazioni su Wikipedia
+  • Avvertenze
+  • Sviluppatori
+  • Dichiarazione sui cookie
+  • Versione mobile
+
+  • Wikimedia Foundation
+  • Powered by MediaWiki
+

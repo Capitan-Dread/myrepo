@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title> prova </title></head>
+<body>
+
+<script>
+
+let array1 = ["noia", {}, function(){}, 32000];
+//Cancella Array
+array1 = [];
+alert(array1);
+
+//scorre array - sintassi foreach
+let nuovo = [2, 34, 51, 80];
+nuovo.forEach(function(elem, index){
+    alert('Elemento : ' + elem + ' Indice : ' + index);});
+    
+/**
+
+OUTPUT :
+
+Elemento :  2 Indice : 0
+Elemento : 34 Indice : 1
+Elemento : 51 Indice : 2
+Elemento : 80 Indice : 3
+
+*/
+ 
+/**************************************************************************/
+  
+  
+let uno = [34, 56];
+let due = [67, 89];
+let tre = uno.concat(due);
+alert(tre);
+
+
+
+/**************************************************************************/
+
+
+
+</script>
+
+</body>
+</html>

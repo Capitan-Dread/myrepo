@@ -1,0 +1,47 @@
+
+[SINTASSI GENERICA]
+
+array = [];
+
+---------------------------------------------------------------------------
+
+[ESEMPIO GENERICO]
+
+let array1 = ["noia", {}, function(){}, 32000];
+//Cancella Array
+array1 = [];
+alert(array1);
+
+---------------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+<!DOCTYPE html>
+<html>
+<head><title> prova </title></head>
+<body>
+
+<script>
+
+let array1 = ["noia", {}, function(){}, 32000];
+//Cancella Array
+array1 = [];
+alert(array1);
+
+//scorre array
+let nuovo = [2, 34, 51, 80];
+nuovo.forEach(function(elem, index){});
+alert(nuovo);
+
+/**
+
+OUTPUT :
+
+2,34,51,80
+
+*/
+
+</script>
+
+</body>
+</html>

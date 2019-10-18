@@ -1,0 +1,11 @@
+
+[SINTASSI GENERICA]
+
+Math.floor(7.8);
+
+-------------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+//Floor - toglie la virgola mobile
+alert(Math.floor(7.8)); //OUTPUT : 7

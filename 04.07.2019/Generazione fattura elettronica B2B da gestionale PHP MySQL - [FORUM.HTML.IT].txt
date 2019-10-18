@@ -1,0 +1,278 @@
+
+https://forum.html.it/forum/showthread/t-2969137.html
+
+---------------------------------------------------------------------------
+
+Ciao a tutti,
+
+
+come da oggetto ho la necessità di generare dal mio gestionale le fatture XML
+conformi alle specifiche attuali; siete a conoscenza di script php o tutorial
+disponibili? Non necessito la parte firma/invio.
+
+Ho fatto un po di ricerche presso siti sviluppatori ma non ho trovato nulla di
+significativo il che è strano considerando l'attualità dell'esigenza.
+
+Grazie e buon lavoro
+
+Nik
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+11-11-2018, 19:19
+Ciao, io ho fatto lo scarico XML delle fatture del mio gestionale in ASP
+vbscript, ora sto ricostruendo il sito in PHP mySQL e rifarò in PHP lo stesso
+script per scaricare il file xml delle fatture selezionando un range di date
+dal al ... le tabelle interessate che io ho costruiti per il mio gestionale che
+sta lavorando da 8 anni sono in ACCESS 2007 quindi Clienti, fatture, e alcune
+tabelle di servizio...penso che la traduzione di tutti i form e relativi
+programmi mi occupi per vari mesi ma la parte XML magari la anticipo quando ho
+pronti i programmi preventivi e ordini che sto traducendo adesso, poi passo a
+lista fatture e al form di export file xml da inviare con il certificato
+digitale al Ministero delle entrate tramite PEC...
+il mio file export sul server è in vbscript (ASP) e lo devo tradurre in php
+sempre lato server
+Se hai pazienza ti posso dare qualche info mentre lo costruisco
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+nicemotion
+12-11-2018, 11:49
+Ciao Vic e grazie
+
+Info sempre gradite, qui un piccolo supporto per il tuo lavoro di translazione
+ASP -> php
+
+https://design215.com/toolbox/translator/trans_login.php
+
+Se posso darti una mano a tradurre la routine di creazione XML lo faccio
+volentieri, ovviamente ;)
+
+Buona giornata
+
+Nik
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 19:42
+Ok se vuoi aiutarmi a tradurre ti do un po di strutture oer iniziare; parto da
+quando il mio programma emette le fatture ... queste sono associate agli ordini
+di vendita e la struttura di partenza per il file XML pa preparo con lo scarico
+degli ordini/fattura su una tabella che ti do adesso in struttura:
+nome tabella SituazioneFatture
+1. NumeroFattura numerico AAAANNNNNN
+2. datafattura GG/MM/AAAA
+3. CodiceAnagrafico Numerico int long
+4. RagioneSociale 80 car
+5. CodiceFiscale 16 car.
+6. PartitaIva 11 car.
+7. Indirizzo 80 car.
+8. NumeroCivico 10 car.
+9. Cap 5 car.
+10. Citta 50 car.
+11. Provincia 4 car.
+12. Nazione 40 car.
+13. Imponibile numerico
+14. Imposta numerico
+15. Importo Numerico
+S0101 imponibile aliquota 1
+S0103 imposta aliquota 1
+S0102 aliquota 1
+S0201 imponibile aliquota 2
+S0203 imposta aliquota 2
+S0202 aliquota 2
+S0301 imponibile aliquota 3
+S0303 imposta aliquota 3
+S0302 aliquota 3
+S0401 imponibile aliquota 4
+S0403 imposta aliquota 4
+S0402 aliquota 4
+
+questa è la struttura di partenza
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 20:50
+una volta caricata la tabella SituazionFatture nel mio gestionale ho messo un
+form per scaricare il file XML passandogli i parametri che ti menziono..
+1. campo progressivo di invio
+2. codicefiscale dichiarante
+3. il campo CARICA che identifica il tipo di soggetto ï¿½ il dichiarante che
+nel caso che utilizza il mio cliente ï¿½ uguale a 1.
+
+poi nel form ho il bottone per far partire il programma di scarico file XM che
+posso metterlo qui e puoi tradurlo....
+il file asp gira sul server e scarica nella cartella /public il file
+costruendolo tramite il numero del progressivo di invio....
+ti posto prima il file asp del form parametri che si chiama
+CaricaSituazioneFatture.asp questo asp si incarica di caricare la tabella
+SituazioneFatture prendendo i dati dagli ordini/itemordini e e dai clienti...
+quindi ti devo dare la struttura di tre tabelle in uso Clienti, Ordini e
+ItemOrdini
+Tabella Clienti
+1. CodiceAnagrafico
+2. RagioneSociale
+3. email
+4. CodiceFiscale
+5. PArtitaIva
+6. Indirizzo
+7. Cap
+8. Citta
+9. Provincia
+10. Telefono
+11. Cellulare
+12. Fax
+13. DataNascita
+14. LuogoNascita
+15. Professione
+16. Fido
+17. ClasseSconto
+18. SpeseBancarieMensili
+19. TipoPagamento
+20. Note
+21. CtrDelete se zero puoi cancellare il record che non ha legami
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 20:50
+una volta caricata la tabella SituazionFatture nel mio gestionale ho messo un
+form per scaricare il file XML passandogli i parametri che ti menziono..
+1. campo progressivo di invio
+2. codicefiscale dichiarante
+3. il campo CARICA che identifica il tipo di soggetto è il dichiarante che nel
+caso che utilizza il mio cliente è uguale a 1.
+
+poi nel form ho il bottone per far partire il programma di scarico file XM che
+posso metterlo qui e puoi tradurlo....
+il file asp gira sul server e scarica nella cartella /public il file
+costruendolo tramite il numero del progressivo di invio....
+ti posto prima il file asp del form parametri che si chiama
+CaricaSituazioneFatture.asp questo asp si incarica di caricare la tabella
+SituazioneFatture prendendo i dati dagli ordini/itemordini e e dai clienti...
+quindi ti devo dare la struttura di tre tabelle in uso Clienti, Ordini e
+ItemOrdini
+Tabella Clienti
+1. CodiceAnagrafico
+2. RagioneSociale
+3. email
+4. CodiceFiscale
+5. PArtitaIva
+6. Indirizzo
+7. Cap
+8. Citta
+9. Provincia
+10. Telefono
+11. Cellulare
+12. Fax
+13. DataNascita
+14. LuogoNascita
+15. Professione
+16. Fido
+17. ClasseSconto
+18. SpeseBancarieMensili
+19. TipoPagamento
+20. Note
+21. CtrDelete se zero puoi cancellare il record che non ha legami
+
+poi passiamo alla tabella Ordini
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 21:00
+Scusa se scrivo molto ma per arrivare alla traduzione del programma bisogna
+avere l'ambiente di lavoro
+
+Tabella Ordini
+1. NumeroOrdine num
+2. DataOrdine
+3. CodiceAnagrafico
+4. CodiceIndirizzo num int
+5. NumeroFattura AAAANNNNNN
+6. NumeroPagamento num int long
+7. NumeroPrimaNota int Long
+8. TipoPagamento num int
+9. TotaleSconto num
+10. Extrasconto int perc
+11. TotaleImporto num
+12. TotaleImponibile num
+13. TotalePagato num
+14. Imposte num
+15. NoteOrdine
+16. NumeroDocumentoTra num
+17. Causale num int
+18. DataInizioTra
+19. OraInizioTra
+20. Banca 80 car
+21. Riferimenti 80 car
+22. DataConsegna
+23. OraConsegna
+24. Aspetto 80 car
+25. N.Colli 10 car.
+26. PesoKg
+27. OrdineMaster num int
+28. NumeroOrdineMaster num long
+29. OrdinatoDa 50 car
+30. RitiratoDa 50 car
+31. operatore
+32 LastUpdate
+
+questa è la struttura ordini nel mio gestionale
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 21:01
+Chi ci segue si puo fare il suo programma di scarico XML con noi... se gli
+serve...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 21:08
+Ora passiamo alla tabella ItemOrdini che contine le righe degli ordini perche
+gli articoli nelle righe ordine possono avere aliquota IVA diversa e stare
+nello stesso ordine. Nel mio gesitonale ho previsto fino a 4 aliquote diverse
+sulle righe ordine nello stesso ordine.
+Tabella ItemOrdini
+1. NumeroOrdine num Long
+2. ItemOrdine num int
+3. CodiceArticolo 20 car.
+4. Barcode 20 car. ma io ne uso 13 per EAN13 num
+5. Descrizione 50 car.
+6. Quantita num int
+7. PrezzoUnitario num
+8. ScontoA num int
+9. ScontoB num int
+10. PercentualeIVA num int
+11. ZZ 3 car nel mio sistema serve a identificare gli articoli da riordinare
+con la parola "red" che viene usata per colorare
+
+
+proseguiamo con la tabella Clienti
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+vic53
+12-11-2018, 21:17
+Questa tabella serve per scaricare i dati anagrafici per il file XML...
+Tabella Clienti.
+1. CodiceAnagrafico num long
+2. RagioneSociale 80 car
+3. Email 50 car
+4. CodiceFiscale 20
+5. PartitaIva 20
+6. Indirizzo 80 car
+7. NumeroCivico 10 car
+8. IndirizzoDefault num int se zero assume uesto indirizzo altrimenti prenderà
+l'indirizzo dalla tabella IndirizziCliente
+con key uguale codiceanagrafico+codiceindirizzo ...nel gestionale il cliente
+puo avere 15 indirizzi
+di destinazione merce diversi... la tabella è inutile scriverla perche ha i
+campi indirizzo ugluali a
+quello del cliente
+9. Cap
+10 Citta
+11 Provincia
+12 Telefono
+13 Cellulare
+14 Fax
+15 DataNascita
+16 LuogoNascita
+17 Professione num int --> tabella professioni
+18 Fido num
+19 ClasseSconto
+20 SpeseBancarieMensili num
+21 TipoPagamento num int -->tab TipoPagamento 0=contanti etc...
+
+
+Ok ora possiamo avere la base di partenza una volta avuto l'ambiente dati a
+disposizione...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Loading

@@ -1,0 +1,14 @@
+
+[SINTASSI GENERICA]
+
+Math.round(7.4);
+
+---------------------------------------------------------------------------
+
+[ESEMPI PRATICI]
+
+//Arrotonda al numero piu approssimativo : 7
+alert(Math.round(7.4)); //OUTPUT : 7
+
+//Arrotonda al numero piu approssimativo : 8
+alert(Math.round(7.6)); //OUTPUT : 8

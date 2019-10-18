@@ -1,0 +1,352 @@
+
+https://forum.italia.it/t/chiarimenti-nodo-sftp/6087
+
+-------------------------------------------------------------------------
+
+
+
+
+
+                         Chiarimenti Nodo / SFTP
+
+
+
+Salve a tutti.
+Sono giorni che tra telefonate al call center, messaggi con il nostro hosting e ricerche in questo (ben fornito) forum, non riesco a trovare la soluzione ai miei quesiti.
+
+Abbiamo creato un programma ad-hoc per la realizzazione delle fatture in .xml, secondo gli standard dati dall’ AdE.
+Dovendo gestire centinaia di fatture al mese, avevamo optato per il sistema SFTP, dando per scontato che potessimo utilizzare una cartella del nostro sito per hostare il necessario.
+
+Ma così non è, perchè, pur settando i parametri dell’hosting per l’accesso SFTP, ci hanno detto che “non puo installare chiavi esterne in nessun caso”.
+
+Pertanto eravamo alla ricerca di una soluzione adeguata: scartando a priori l’invio tramite PEC, restano i 2 sistemi server (SFTP e quello WEB).
+
+Poichè noi vorremmo semplicemente caricare in una cartella gli xml delle fatture, crediamo sia più giusto il sistema SFTP.
+
+Ma dove trovo un server SFTP che possa essermi utile a questo scopo e che venga accettato dal sistema di accreditamento? Perchè al momento non disponiamo di un server nostro sempre online. C’è un equivalente che permetta di hostare esternamente questo?
+
+Resto in attese di vostre dritte, sperando di essermi spiegato.
+
+Grazie mille
+
+
+
+
+creato
+nov '18
+ultima risposta
+dic '18
+46
+risposte
+1,0k
+visite
+6
+utenti
+7
+mi piace
+4
+collegamenti
+131211
+
+fednikx
+Federico Crepaldi
+nov '18
+Per quel che riguarda il server SFTP in sè è sufficiente un qualsiasi VPS su cui far girare un server SFTP.
+La trasmissione SFTP però non è così immediata, non basta semplicemente caricare gli xml in una directory. È necessario predisporre un archivio zip, contenente le fatture + un file di quadratura che va firmato e cifrato con le chiavi fornite da Sogei.
+Bisogna poi sempre ricevere tramite SFTP ed elaborare le notifiche da Sogei.
+
+1 Risposta1
+
+
+
+livibel
+livio
+nov '18
+Grazie mille per avermi risposto.
+In che modo dovrei gestire questi file? È sufficiente creare il file zippato con la chiave all’interno? O questa chiave è diversa sempre? Ripeto,io non so se questo è il percorso giusto…
+Ho bisogno di automazione tutto qui.
+Però pur volendo programmare qualcosa che mi gestisca questo, non riesco a capire esattamente cosa deve fare cosa…
+Già il dover pensare di caricare ognivolta il file zip sul server mi da fastidio… :neutral_face:Lol
+
+
+
+
+Relativamente alla procedura di firma+cifratura per l’invio e
+decifratura+sfirma per la ricezione, abbiamo provato su un file xml di esempio
+ad eseguire tutta la trafila, quindi firmarlo, cifrarlo, decifrarlo, sfirmarlo
+La terza fase, la decifratura ci segnala un errore ed impedisce di ottenere il
+file firmato, come atteso
+La domanda che vorrei farti, visto che rispondi su problematiche relative a
+sdiftp, e’ se ritieni possibile decifrare un file che tu stesso hai cifrato (il
+mio timore e’ che non sia possibile decifrare un file cifrato da se stessi, ma
+solo decifrare un file ricevuto da ade) ?
+Che dici, e’ possibile prendere un xml e fargli fare le 4 trasformazioni in
+sequenza ri-ottenendo il file originale?
+
+fednikx (Federico Crepaldi) 30 Novembre 2018, 6:38pm #5
+
+Mi sono riletto e mi sono spiegato malissimo! :smile:
+L’archivio zip da inviare contiene le fatture+il file di quadratura. Lo zip
+viene firmato e cifrato con i certificati forniti da Sogei che sono sempre gli
+stessi.
+Sogei quindi ti restituisce le notifiche per la varie fatture.
+Il nodo può naturalmente essere usato anche per ricevere le fatture.
+Non so se questo sia il percorso giusto per voi: questo dipende da quante
+risorse avete a disposizione per la vostra infrastruttura IT. Se lo scopo è
+semplicemente inviare un file zip contenente N fatture questo si può fare anche
+uploadandolo da qui:
+https://www.fatturapa.gov.it/export/fatturazione/it/strumenti.htm
+
+fednikx (Federico Crepaldi) 30 Novembre 2018, 6:40pm #6
+
+Se stai seguendo la procedura di firma e cifratura che ti fornisce Sogei no.
+Quando cifri lo fai utilizzando la chiave pubblica di Sogei, di conseguenza per
+decifrare ti serve la corrispondente chiave privata che tu non hai.
+
+amorosik (-----) 1 Dicembre 2018, 7:26am #7
+
+Ah, quindi e’ normale che il tentativo di decifratura, di un file cifrato da
+me, non vada a buon fine, bene
+Non so se hai seguito l’accreditamento per un nodo ftp, ma dal momento che
+attivi il tutto e lo comunichi agli operatori sogei (io ho risposto a
+servizicrittograf…@sogei.it), quanto tempo passa prima che vengano eseguiti i
+primi test di lettura/scrittura da sogei a nodo?
+Chiedo questo perche’ e’ una settimana che ho comunicato tutto e ancora non si
+vede niente, ho anche chiamato al numero indicato nelle loro e-mail, uno 06-…
+ma dicono che non c’entrano niente col servizio tecnico Sogei ???
+Ciao e grazie
+
+fednikx (Federico Crepaldi) 1 Dicembre 2018, 9:02am #8
+
+Ciao @amorosik, il primo test che ha effettuato Sogei fu proprio di prelevare
+il file cifrato dal mio server, effettuare il procedimento di decifratura e
+verifica firma, rifirmarlo e ricifrarlo con la mia chiave pubblica. Dopo mi
+chiesero di decifrarlo, verificare la firma e verificare che il contenuto fosse
+il medesimo e non fosse stato corrotto.
+Da quando gli ho comunicato che il mio server era pronto per l’esecuzione dei
+test ed ho predisposto il file, saranno passati un paio di giorni
+dall’esecuzione del test. Poi mi hanno passato in ambiente di test nel giro di
+3-4gg. I test li ho completati subito ma per il passaggio in produzione hanno
+impiegato una settimana dalla mia richiesta.
+p.s.: tutto ciò a Luglio, immagino ora siano decisamente più ingolfati… Anche
+perchè nelle ultime settimane il SDI si è tremendamente rallentato tanto da
+costringerli ad un fermo per upgrade oggi e domani…
+
+livibel (livio) 3 Dicembre 2018, 11:04am #9
+
+Ciao fednikx
+e grazie per le tue dritte.
+Quindi, se io volessi creare le fatture distinte in .xml, una volta ogni 10
+giorni ad esempio (per caricare 3 zip da inviare), mi basterebbe creare il file
+zip con fatture e file quadratura, giusto?
+(per crearlo c’è una applicazione particolare?)
+E caricarlo tramite http://sdi.fatturapa.gov.it/SdI2FatturaPAWeb/sicurezza/
+AccediAlServizioAction.do?pagina=invia_fattura&pagCorr=
+Inviare%20la%20fattura%20via%20web se ho ben capito
+
+fednikx (Federico Crepaldi) 3 Dicembre 2018, 11:19am #10
+
+Ciao @livibel!
+Per caricare il file zip tramite il link
+
+    http://sdi.fatturapa.gov.it/SdI2FatturaPAWeb/sicurezza/
+    AccediAlServizioAction.do?pagina=invia_fattura&pagCorr=
+    Inviare%20la%20fattura%20via%20web
+
+non devi inserire il file di quadratura. In quel caso è sufficiente creare un
+semplice zip con all’interno le fatture che vuoi inviare.
+L’unica accortezza è che la nomenclatura degli archivi zip segue le regole di
+nomenclatura dei file fattura ad es
+
+    IT12345678901_1.zip
+    IT12345678901_2.zip
+
+livibel (livio) 3 Dicembre 2018, 11:41am #11
+
+Belle notizie quindi! :smiley:
+Ad ogni modo, se in un file zip metto 50 fatture, come numerazione il file zip
+che logica dovrà tenere?
+Nel senso, ipotizzando invio fatture dalla 30 alla 70, il nome del file zip
+quale di queste diciture dovrà avere:
+
+1- IT12345678901_2.zip (solo il 2 perchè è il secondo file zip dell’anno, e
+preclude che il primo avesse le fatture dalla 1 alla 29)
+2- IT12345678901_30.zip (basta dare la prima della serie, anche se il file
+contiene anche le altre)
+3- IT12345678901_70.zip (vabbè, non avrebbe senso… comunque, l’ultima della
+serie come nome)
+
+e inoltre, gli zeri o i caratteri, sono da inserire? Ad es.
+IT12345678901_0002.zip o IT12345678901_FAT0002.zip
+
+grazie mille, mi stai davvero aiutando alla grande :wink:
+
+fednikx (Federico Crepaldi) 3 Dicembre 2018, 12:00pm #12
+
+Figurati @livibel , se non ci aiutassimo tra di noi saremmo in balia di una
+documentazione lacunosa ed ambigua… :smiley:
+
+● livibel:
+
+
+    1- IT12345678901_2.zip (solo il 2 perchè è il secondo file zip dell’anno, e
+    preclude che il primo avesse le fatture dalla 1 alla 29)
+
+Questo è il metodo che ho adoperato io prima che mi accreditassero il nodo. Non
+viene fatto nessun controllo sugli zeri, solamente sulla univocità del nome.
+Quando poi vai a fare un controllo sui file trasmessi, vedrai che lo zip viene
+scartato ma vengono inserite in coda di elaborazione tutte le fatture in esso
+contenute.
+
+1 Like
+livibel (livio) 3 Dicembre 2018, 12:29pm #13
+
+Io che mi stavo preoccupando dell’ SFTP…
+Direi che così facendo non ci sono problemi, quindi.
+Una volta inviati tramite questo sistema, è possibile pure considerare lo
+spazio di archiviazione dell’agenzia delle entrate, giusto?
+
+Domanda OT: un metodo di pagamento tipo Paypal, quale codice prevede? Uno di
+questi? Non ho trovato riscontri da nessuna parte :frowning:
+MP01 - contanti
+MP05 - bonifico
+MP07 - bollettino bancario
+MP08 - carta di pagamento
+
+fednikx (Federico Crepaldi) 3 Dicembre 2018, 12:45pm #14
+● livibel:
+
+
+    Una volta inviati tramite questo sistema, è possibile pure considerare lo
+    spazio di archiviazione dell’agenzia delle entrate, giusto?
+
+Sì, devi solo aderire al servizio di conservazione tramite il tuo cassetto
+fiscale
+https://ivaservizi.agenziaentrate.gov.it/portale/
+
+● livibel:
+
+
+    Domanda OT: un metodo di pagamento tipo Paypal, quale codice prevede? Uno
+    di questi? Non ho trovato riscontri da nessuna parte :frowning:
+    MP01 - contanti
+    MP05 - bonifico
+    MP07 - bollettino bancario
+    MP08 - carta di pagamento
+
+Non saprei… Così a naso direi MP08. Ci vorrebbe un commercialista… :grimacing:
+Quel che farei io nel dubbio, è omettere “DatiPagamento” tanto non è un campo
+obbligatorio :smiley:
+
+1 Like
+livibel (livio) 7 Dicembre 2018, 1:14pm #15
+
+Non sono morto…
+ho provato ha caricare il mio test di file xml, alla pagina
+https://sdi.fatturapa.gov.it/SdI2FatturaPAWeb/ControllaFatturaAction.do
+
+e immediatamente ottengo errore nome file, che è così formato:
+IT01234567890-00001.xml
+(ho provato anche -1 e -FPR00001)
+
+ovviamente al posto della partita iva d’esempio c’è quella reale della ditta,
+sempre di 11 cifre (IT escluso, chiaramente).
+
+Cosa c’è che non va?
+
+paolo.pedrielli (Paolo) 7 Dicembre 2018, 1:17pm #16
+
+Manca l’IT davanti.
+La forma corretta è esattamente quella da te indicata, lasciando IT.
+
+1 Like
+livibel (livio) 7 Dicembre 2018, 1:22pm #17
+
+cioè due volte IT?
+ITIT01234567890-00001.xml ???
+
+non va…
+
+forse ti riferisci all “escluso” che era escluso nel conteggio degli 11
+caratteri… mi sono espresso male
+L’ IT c’è
+
+paolo.pedrielli (Paolo) 7 Dicembre 2018, 1:23pm #18
+● livibel:
+
+
+    e immediatamente ottengo errore nome file, che è così formato:
+    IT01234567890-00001.xml
+    (ho provato anche -1 e -FPR00001)
+
+    ovviamente al posto della partita iva d’esempio c’è quella reale della
+    ditta, sempre di 11 cifre (IT escluso, chiaramente).
+
+    Cosa c’è che non va?
+
+Quii hai scritto ‘IT escluso, chiaramente’.
+Volevo dirti che non devi escludere l’IT.
+
+paolo.pedrielli (Paolo) 7 Dicembre 2018, 1:24pm #19
+
+Scusami, non avevo letto tutta la tua risposta, ok IT c’è, al posto del ‘-’
+devi mettere ‘_’ (underscore).
+
+Ciao
+Paolo
+
+2 Likes
+Rudj (Rudj Maria Todaro) 17 Dicembre 2018, 12:02pm #20
+
+ciao livibel,
+hai trovato qualche riscontro sulla modalità di pagamento per paypal?
+
+Francesco1 (Francesco) 17 Dicembre 2018, 5:08pm #21
+
+Salve, accreditando il canale SDIFTP, da Sogei hanno riscontrato il seguente
+problema
+debug1: Authenticating to xx:xx:xx:xx as ‘XX’
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256@libssh.org
+debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC:
+compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC:
+compression: none
+debug1: kex: curve25519-sha256@libssh.org need=64 dh_need=64
+debug1: kex: curve25519-sha256@libssh.org need=64 dh_need=64
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: ecdsa-sha2-nistp256 SHA256:mkeWygZbr+9ys4HeFD2FAhdaS6y
+/aeDgyFtEaWb6Deo
+Host key verification failed.
+Couldn’t read packet: Connection reset by peer
+
+Qualcuno ha avuto lo stesso problema, oppure sa come risolverlo? Grazie
+
+livibel (livio) 18 Dicembre 2018, 7:08am #22
+
+Ciao Rudj.
+A dire il vero al momento sto seguendo il consiglio che trovi più sopra, ovvero
+di non indicare nulla del metodo di pagamento non obbligatorio.
+
+Francesco1 (Francesco) 18 Dicembre 2018, 11:10am #23
+
+Ciao a tutti, per quanto riguarda le notifiche esito committente nella fase di
+test, come avete fatto?
+
+pagina seguente →
+
+  • Home
+  • Categorie
+  • FAQ/Linee Guida
+  • Termini del Servizio
+  • Politica della Privacy
+
+Fornito da Discourse, si consiglia di abilitare JavaScript
+
+Questo sito utilizza cookie tecnici, analytics e di terze parti. Proseguendo
+nella navigazione accetti l’utilizzo dei cookie.
+
+Accetto Privacy policy
+

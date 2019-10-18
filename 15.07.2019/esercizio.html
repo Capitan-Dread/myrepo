@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head><title> esempio </title></head>
+<body>
+
+<script>
+
+//let newData = new Date(17934881090);
+//alert(newData);                        //OUT : Mon Jul 27 1970 15:54:41 GMT+0200 
+                                               //(Ora legale dell’Europa centrale)
+
+//let adesso = Date.now();
+//alert(adesso);                         //OUT : 1563180311583 
+                                               //(TimeStamp ms da 1970 fino a adesso)
+                                                      
+//let nuovaData = Date.parse('25 mar 2010');
+//alert(nuovaData);                      //OUT : 1269471600000
+                                               //(Imposta TimeStamp)
+                                        
+/************************************************************************/
+
+//let dataStringaOra = new Date('25 may 2014 15:24:12');
+//alert(dataStringaOra);                  //OUT : Sun May 25 2014 15:24:12 GMT+0200 
+                                               //(Ora legale dell’Europa centrale)
+
+//let dataConNumero = new Date(2015, 10, 23, 12, 34, 45);
+//alert(dataConNumero);                   //OUT : Mon Nov 23 2015 12:34:45 GMT+0100 
+                                                //(Ora standard dell’Europa centrale)
+                      
+let adesso = Date.now();
+let millisec = 1000, minuti = 60, ore = 60, oreGiorno = 24, giorni = 3;
+let fraTreGiorni = millisec * minuti * ore * oreGiorno * giorni;
+let totMillisec = adesso + fraTreGiorni;
+
+alert(new Date(totMillisec));             //OUT : Thu Jul 18 2019 11:27:43 GMT+0200 
+                                          //      (Ora legale dell’Europa centrale)
+                                          //      (Data di fra tre giorni)
+
+
+</script>
+
+</body>
+</html>

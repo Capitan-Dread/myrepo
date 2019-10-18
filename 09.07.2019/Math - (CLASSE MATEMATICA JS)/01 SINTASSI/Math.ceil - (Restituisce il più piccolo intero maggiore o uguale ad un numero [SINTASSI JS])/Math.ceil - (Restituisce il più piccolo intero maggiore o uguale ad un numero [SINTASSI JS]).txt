@@ -1,0 +1,10 @@
+
+[SINTASSI GENERICA]
+
+Math.ceil(7.1);
+
+----------------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+alert(Math.ceil(7.1)); //OUTPUT : 8

@@ -1,0 +1,14 @@
+
+[SINTASSI GENERICA]
+
+Math.floor(Math.random() * numero);
+
+----------------------------------------------------------------------------
+
+[ESEMPI PRATICI]
+
+//Da 0 a 10
+alert(Math.floor(Math.random() * 11));
+
+//Da 1 a 10
+alert(Math.floor(Math.random() * 10) + 1);

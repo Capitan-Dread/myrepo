@@ -1,0 +1,10 @@
+
+[SINTASSI GENERICA]
+
+Math.PI;
+
+-----------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+alert(Math.PI);

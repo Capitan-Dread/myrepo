@@ -1,0 +1,701 @@
+
+https://it.wikipedia.org/wiki/Calendario_giuliano
+
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+
+
+                             Calendario Giuliano
+
+
+   
+
+Il calendario giuliano è un calendario solare, cioè basato sul ciclo delle
+stagioni. Fu elaborato dall'astronomo egizio Sosigene di Alessandria e
+promulgato da Giulio Cesare (da cui prende il nome), nella sua qualità di
+pontefice massimo, nell'anno 46 a.C.
+
+[ ]
+
+Indice
+
+  • 1 Storia
+  • 2 Anni bisestili
+  • 3 Mesi e giorni
+  • 4 Numerazione degli anni
+      □ 4.1 Il calendario liturgico ortodosso
+  • 5 Calendario giuliano prolettico
+  • 6 Note
+  • 7 Voci correlate
+  • 8 Altri progetti
+  • 9 Collegamenti esterni
+
+Storia[modifica | modifica wikitesto]
+
+Esso fu da allora il calendario ufficiale di Roma e dei suoi domini;
+successivamente il suo uso si estese a tutti i Paesi d'Europa e d'America, man
+mano che venivano cristianizzati o conquistati dagli europei. Rispetto all'anno
+astronomico, ha accumulato un piccolo ritardo ogni anno fino ad arrivare a
+circa 10 giorni nel XVI secolo. Per questo nel 1582 è stato sostituito dal
+calendario gregoriano per decreto di papa Gregorio XIII; diverse nazioni
+tuttavia hanno continuato a utilizzare il calendario giuliano ben oltre tale
+data, adeguandosi poi in tempi diversi tra il XVIII e il XX secolo.
+
+Alcune Chiese appartenenti alla Chiesa ortodossa tuttora usano il calendario
+giuliano come proprio calendario liturgico: da ciò deriva il diverso computo
+della Pasqua cattolica e ortodossa. Il calendario giuliano è anche alla base
+del calendario berbero, tradizionale del Nordafrica.
+
+Anni bisestili[modifica | modifica wikitesto]
+
+Nel calendario giuliano si utilizzano gli anni bisestili per compensare il
+fatto che la durata dell'anno tropico (o anno solare) non è data da un numero
+intero di giorni. Il giorno in più si aggiunge dopo il 24 febbraio (sexto die
+ante Calendas Martias nella lingua latina). Va ricordato che i romani avevano
+l'abitudine di contare i giorni mensili sottraendoli a determinate festività,
+come le Idi e le Calende, contando anche il giorno di partenza; quindi tra il
+24 febbraio e il 1º marzo (che coincide con le Calende di marzo) ci sono
+appunto sei giorni (24-25-26-27-28-1).
+
+Negli anni bisestili, con febbraio di 29 giorni, il giorno 24, che era sexto
+die, sarebbe diventato septimo die. Ma dato che septimo die era il giorno 23,
+non potendo chiamare il 24 septimo die lo chiamarono bis sexto die. Di qui il
+nome di "anno bisestile".
+
+Sosigene stabilì che un anno ogni quattro fosse bisestile: in questo modo la
+durata media dell'anno giuliano risultava di 365 giorni e un quarto. Ne
+consegue che il calendario giuliano è ciclico ogni 4 anni equivalenti a 365 × 4
++ 1 = 1.461 giorni; considerando anche i giorni della settimana, allora il
+calendario giuliano è ciclico ogni 1.461 × 7 = 10.227 giorni che equivalgono a
+4 × 7 = 28 anni (questo perché 1.461 non è divisibile per 7). La differenza con
+l'anno tropico risulta così di soli 11 minuti e 14 secondi circa, una
+precisione molto accurata per l'epoca.
+
+Questa differenza, pari a circa un centesimo di giorno, si accumulava però col
+passare dei secoli, per cui la data d'inizio delle stagioni si spostava man
+mano all'indietro (si perdeva un giorno ogni 128 anni circa). Questo fenomeno
+era ben noto agli astronomi medievali; Dante vi accenna nella Divina Commedia:
+
+«Ma prima che gennaio tutto si sverni
+per la centesma ch'è là giù negletta»
+
+(Paradiso XXVII, 142-143)
+
+Per questo motivo nel 1582 fu introdotto il calendario gregoriano, che riduce
+l'errore a soli 26 secondi (un giorno ogni 3.323 anni circa).
+
+Secondo l'odierna numerazione degli anni (quella del calendario gregoriano),
+dopo la nascita di Cristo sono bisestili gli anni il cui numero è divisibile
+per 4. Prima di Cristo, invece, non esisteva una regola fissa, dato che
+l'applicazione della norma era demandata discrezionalmente a decisioni
+politiche: fu infatti solo Ottaviano Augusto a imporre definitivamente la
+cesarea determinazione delle annualità bisestili.
+
+Il primo anno bisestile fu il 45 a.C., anno in cui il nuovo calendario entrò in
+vigore. Per compensare gli errori accumulati in passato e riportare l'equinozio
+primaverile al 25 marzo, era però necessario introdurre 85 giorni. Allo scopo
+furono aggiunti due mesi fra novembre e dicembre all'anno precedente, uno di 33
+giorni e l'altro di 34; motivo per cui il 46 a.C., durato 445 giorni, fu
+soprannominato annus confusionis ("l'anno della confusione")^[1].
+
+Questa confusione ebbe varie ripercussioni nei successivi 50 anni fino a circa
+l'8 a.C. Infatti dopo la morte di Giulio Cesare (44 a.C.) si commisero vari
+errori facendo diventare bisestili alcuni anni che non lo dovevano essere e
+saltando quelli corretti. Fu poi Augusto nell'8 a.C. a sistemare l'errore
+ordinando che per un certo numero di anni non ci fossero più anni bisestili.
+
+Non vi è unanimità di vedute riguardo quali anni siano effettivamente stati
+bisestili prima del riordino augusteo; un'ipotesi semplice prevede che essi
+siano stati 45 a.C., 42 a.C., 39 a.C., 36 a.C., 33 a.C., 30 a.C., 27 a.C., 24
+a.C., 21 a.C., 18 a.C., 15 a.C., 12 a.C., 9 a.C., 8. Sarebbe cioè stata
+fraintesa l'indicazione di inserire un anno bisestile ogni tre anni "normali",
+inserendolo invece ogni tre anni "compreso" quello bisestile (cioè uno ogni tre
+invece che uno ogni quattro).
+
+Mesi e giorni[modifica | modifica wikitesto]
+
+La riforma giuliana, in sostanza, riprendeva il calendario egizio riformato dal
+decreto di Canopo e fissava l'inizio dell'anno il 1º gennaio, mentre prima era
+il 1º marzo. Infatti i mesi di quintile (oggi luglio), sestile (agosto),
+settembre, ottobre, novembre e dicembre derivavano i loro nomi dall'essere
+rispettivamente il quinto, sesto, settimo, ottavo, nono e decimo mese
+dell'anno.
+
+I nomi dei mesi del calendario giuliano sono quelli derivanti dall'antico
+calendario romano, con alcune modifiche introdotte dagli imperatori:
+
+   Mesi
+                                              N° giorni    N° giorni    Mesi
+(calendario           Definizione            prima del 45 dopo il 45   attuali
+  romano)                                        a.C.        a.C.
+
+             Mese dedicato a Ianus (Giano),
+               dio bifronte, che segnava
+              simbolicamente il passaggio
+Ianuarius^   dall'anno precedente a quello        29          31       Gennaio
+    [2]       successivo. Inoltre Ianua in
+            latino significa "porta", altro
+               riferimento al cambiamento
+                       dell'anno.
+                                             28 (in anni
+                                               comuni)
+              deriva dalla parola sabina      Negli anni
+                  februa che significa       intercalari:
+            "purificazione", in questo mese     23 se      28 (anni
+Februarius   si praticava la purificazione   intercalari  bisestili : Febbraio
+              dei campi prima che fossero        sono         29)
+                       coltivati.             variabili
+                                               23/24 se
+                                             intercalari
+                                              sono fissi
+                                               0 (salto
+Mercedonius                                     anni:
+     /                                        variabile     abolito       —
+Intercalari                                     (27/28
+                                             giorni)^[3]
+                                             o fisso)^[4]
+  Martius   Mese dedicato a Marte, dio della      31          31        Marzo
+                        guerra.
+            Deriva dall'etrusco Apru, cioè
+            Afrodite, la dea greca e, prima
+ Aprilis:   ancora, fenicia: dea della forza      29          30       Aprile
+            vitale, sotterranea, che induce
+                  le gemme a fiorire.
+               Dedicato a Maia, dea della
+   Maius      fertilità, in questo mese si        31          31       Maggio
+            praticava un rituale mirato alla
+                  fertilità dei campi.
+Iunius^[2]   Dedicato alla dea Iuno, cioè         29          30       Giugno
+                        Giunone.
+Iulius^[5]  Dedicato a Gaius Iulius Caesar,       31          31       Luglio
+(Quintilis)          Giulio Cesare.
+Augustus (   Dedicato a Gaius Iulius Caesar
+ Sextilis)      Octavianus Augustus, l'           29          31       Agosto
+             imperatore Ottaviano Augusto.
+                Settimo mese dell'antico
+ September  calendario di Romolo che vedeva       29          30      Settembre
+                 marzo come primo mese.
+  October    Ottavo mese del calendario di        31          31       Ottobre
+                        Romolo.
+ November     Nono mese del calendario di         29          30      Novembre
+                        Romolo.
+ December    Decimo mese del calendario di        29          31      Dicembre
+                        Romolo.
+
+Il settimo mese (quinto secondo il calendario di Romolo, che veniva chiamato
+infatti quintilis) fu dedicato a Giulio Cesare nel 44 a.C. per iniziativa di
+Marco Antonio, l'ottavo (sextilis, il sesto mese secondo il calendario di
+Romolo) a Ottaviano Augusto nell'8 a.C. (Lex Pacuvia de mense augusto). Alcuni
+testi datano il cambiamento di nome di agosto al 26 o al 23 a.C. ma la data
+della Lex Pacuvia è certa.
+
+Alcuni affermano (Sacrobosco nell'opera Computus del 1235) che originariamente
+febbraio avesse 29 giorni, e che da marzo in poi si alternassero regolarmente
+mesi di 31 e 30 giorni; ma come ulteriore atto di omaggio ad Augusto, fu
+decretato anche di aggiungere un giorno ad agosto (che, secondo questa tesi,
+aveva 30 giorni) togliendolo a febbraio, e invertendo la durata degli ultimi
+quattro mesi per non avere tre mesi consecutivi di 31 giorni.
+
+Altri cambiamenti di nome dei mesi non sopravvissero. Caligola chiamò
+"germanico" settembre, Nerone chiamò "claudio" maggio e "germanico" giugno, e
+Domiziano chiamò "germanico" settembre e "domiziano" ottobre. Bloccata sul
+nascere la proposta fatta per piaggeria a Tiberio di chiamare novembre, il suo
+mese natale, col suo nome. La risposta dell'imperatore fu: "E che farete se
+Roma avrà tredici imperatori?". Anche Carlo Magno avrebbe tentato di dare nuovi
+nomi ai mesi: wintarmanoth, hornung, lentzinmanoth, ostarmanoth, winemanoth,
+brachmanoth, heuvimanoth, aranmanoth, witumanoth, wintumanoth, windumemanoth,
+herbistmanoth e heilagmanoth.
+
+Il modo di contare i giorni continuò nella tradizione romana, cioè contando i
+giorni che mancavano ad alcune festività fisse (Calende, None e Idi), fino a
+che i Visigoti introdussero l'abitudine di assegnare un numero progressivo ai
+giorni, metodo che però divenne ufficiale solo con Carlo Magno. Con il
+Cristianesimo, inoltre, invalse l'abitudine popolare di indicare il giorno con
+il nome del santo che in esso si venerava: questa usanza si mantenne fino
+all'età moderna. Le feste dei santi erano chiamate feriae, da cui l'espressione
+"giorni feriali" per i giorni non festivi.
+
+Nel 321 l'Imperatore Costantino introdusse la settimana di sette giorni:
+
+ 1. Domini dies, il giorno del Signore, in seguito modificato in Dominica.
+ 2. Lunae dies, il giorno dedicato alla dea Luna.
+ 3. Martis dies, giorno dedicato al dio Marte.
+ 4. Mercurii dies, dedicato al dio Mercurio.
+ 5. Iovis dies, dedicato al dio Giove.
+ 6. Veneris dies, dedicato alla dea Venere.
+ 7. Sabbath: secondo la religione ebraica è il giorno sacro di astensione da
+    qualsiasi opera creatrice e dunque anche dal lavoro. In origine, prima
+    dell'influenza della religione ebraica nel mondo romano, era il Saturni
+    dies, giorno dedicato al dio Saturno. Quest'ultima derivazione si ritrova
+    nella designazione anglosassone di questo giorno, infatti, il Saturni dies
+    viene tradotto letteralmente in Saturn day, da cui la forma contratta di
+    Saturday.
+
+Inoltre decretò che fosse la domenica (dies solis) giorno di riposo dedicato al
+dio Sole, invece del sabato, tradizionale non solo per gli Ebrei ma anche per i
+gentili, e associato alla risurrezione di Cristo, in quanto se Gesù era morto
+il quinto giorno della settimana ebraica, doveva essere resuscitato la
+domenica. Nel latino cristiano i giorni della settimana sono chiamati, a
+partire dalla domenica: dominica, feria secunda, feria tertia, feria quarta,
+feria quinta, feria sexta, sabbatum. Quest'uso di contare i giorni a partire
+dalla domenica, considerato quindi primo giorno della settimana, viene
+dall'Ebraismo. È rimasto nel nome dei giorni della settimana anche in alcune
+lingue moderne, per esempio in Portoghese e in Greco.
+
+D'altro canto, con la domenica festiva si soddisfaceva anche un'altra religione
+molto diffusa: il culto di Mitra, dio dei patti e dell'amicizia nella religione
+persiana del periodo vedico che adorava il sole e il suo derivato Sol Invictus
+(Sole invitto), da cui deriva l'associazione tra il sole e Gesù adoperata da
+Costantino per promuovere questa nuova, ma sconosciuta ai più, religione (il
+cristianesimo).
+
+Si ricorda infine che la settimana di sette giorni già si trovava nel
+Calendario egizio, oltre che in quelli mesopotamici.
+
+Numerazione degli anni[modifica | modifica wikitesto]
+
+A partire dalla fine del periodo repubblicano il calendario giuliano enumerava
+gli anni dalla fondazione della città di Roma (Ab Urbe condita), che avvenne
+nell'anno 753 a.C. secondo i calcoli di Dionigi il Piccolo. Precedentemente il
+metodo in uso tra i Romani per ordinare gli eventi della storia era quello
+adottato agli inizi dell'età repubblicana: si indicavano gli anni a partire dai
+nomi dei due consoli in carica (detti perciò eponimi). Dionigi calcolò la data
+della nascita di Gesù sulla base di uno dei due censimenti effettuati in
+Israele dai Romani, ma sbagliò probabilmente il riferimento: alcune fonti,
+confrontate con i quattro Vangeli canonici, ci mostrano come Erode, tetrarca
+della Galilea, resosi famoso per la strage degli innocenti, fosse già morto
+quattro anni prima. Alcuni studiosi fanno riferimento anche al passaggio di una
+cometa.
+
+Il calendario liturgico ortodosso[modifica | modifica wikitesto]
+
+In alcuni paesi la Chiesa ortodossa celebra le sue festività secondo le date
+del calendario giuliano, per questo motivo in questi paesi il Natale
+corrisponde al 7 gennaio del calendario gregoriano. Anche la data della Pasqua
+differisce fra oriente e occidente. Le tredici festività liturgiche maggiori
+sono:
+
+ 1. Natività di Maria Madre di Dio Cattolici (8 settembre), Ortodossi che
+    seguono il calendario Giuliano (21 settembre)
+ 2. Esaltazione della Santa Croce Cattolici (14 settembre) Ortodossi (27
+    settembre)
+ 3. Entrata di Maria al Tempio Cattolici (21 novembre) Ortodossi (4 dicembre)
+ 4. Natività di nostro Signore e Salvatore Gesù Cristo Cattolici (25 dicembre)
+    Ortodossi (6 o 7 gennaio)
+ 5. Teofania o Epifania Cattolici (6 gennaio) Ortodossi (19 gennaio)
+ 6. Presentazione di Gesù al Tempio Cattolici (2 febbraio) Ortodossi (15
+    febbraio)
+ 7. Annunciazione di Maria Cattolici (25 marzo) Ortodossi (7 aprile)
+ 8. Entrata in Gerusalemme (domenica prima di Pasqua)
+ 9. Pasqua (domenica di resurrezione di Gesù Cristo)
+10. Ascensione di Gesù (40 giorni dopo Pasqua)
+11. Pentecoste (50 giorni dopo Pasqua)
+12. Trasfigurazione di Nostro Signore Cattolici (6 agosto) Ortodossi (19
+    agosto)
+13. Assunzione di Maria Cattolici (15 agosto) Ortodossi (28 agosto)
+
+Il calendario giuliano è tuttora in uso in Etiopia, sia dallo Stato sia dalla
+Chiesa. Il calendario giuliano è seguito soprattutto dalla Chiesa Serba,
+Macedone, Russa, Georgiana e di Gerusalemme.
+
+Calendario giuliano prolettico[modifica | modifica wikitesto]
+
+Il "calendario giuliano prolettico" si ottiene estendendo nel passato il
+calendario giuliano a date che precedono il 4 d.C., anno in cui si è
+stabilizzata la convenzione dell'anno bisestile quadriennale, infatti dal 45
+a.C. al 4 d.C. gli anni bisestili sono stati irregolari.
+
+Note[modifica | modifica wikitesto]
+
+ 1. ^ Lecture 11: The Calendar
+ 2. ^ ^a ^b The letter J was not invented until the 16th century.
+ 3. ^ Censorinus, The Natal Day, 20.28, tr. William Maude, New York 1900,
+    available at [1] and Macrobius, Saturnalia, 1.13.12, 1.13.15 tr. Percival
+    Vaughan Davies, New York 1969, Latin text at [2] say that an intercalary
+    month of 22 or 23 days was inserted at or near the end of February. Varro,
+    On the Latin Language, 6.13, tr. Roland Kent, London 1938, available at [3]
+    says that in intercalary years the last five days of February were dropped.
+    They were re – added at the end of the intercalary month and formed part of
+    it.
+ 4. ^ An intercalary day was sometimes inserted after February to prevent the
+    nones and ides of March falling on a nundine. See Macrobius, Saturnalia,
+    1.13.16-1.13.19 tr. Percival Vaughan Davies, New York 1969, Latin text at
+    [4]. Those who say the length of Intercalaris was fixed also say that the
+    intercalary day was sometimes inserted between February and Intercalaris
+    even when no nones/ides/nundine clash would otherwise have occurred. See
+    Mrs A K Michels, The Calendar of the Roman Republic, Princeton 1967.
+ 5. ^ The spelling Quinctilis is also attested; see page 669 of The Oxford
+    Companion to the Year.
+
+Voci correlate[modifica | modifica wikitesto]
+
+  • Acoreo
+  • Calendario berbero
+  • Calendario bizantino
+  • Calendario ebraico
+  • Calendario egizio
+  • Calendario gregoriano
+  • Calendario gregoriano prolettico
+  • Calendario romano
+  • Giorno giuliano
+  • ISO 8601
+
+Altri progetti[modifica | modifica wikitesto]
+
+Altri progetti
+
+  • Wikimedia Commons
+
+  • Collabora a Wikimedia Commons Wikimedia Commons contiene immagini o altri
+    file sul calendario giuliano
+
+Collegamenti esterni[modifica | modifica wikitesto]
+
+  • 
+  • (EN) Calendario giuliano, su Enciclopedia Britannica, Encyclopædia
+    Britannica, Inc. Modifica su Wikidata
+
+                                   V · D · M
+                                     Tempo
+             Tempo · Eternità · Argomenti sull'eternità ·
+  Concetti   Immortalità
+ principali  Tempo profondo · Storia · Passato · Presente ·
+             Futuro · Futurologia
+             Cronometria · UTC · UT · TAI · Secondo ·
+             Minuto · ora · Tempo siderale · Tempo solare ·
+             Fuso orario
+
+             Orologio · Orologeria · Storia della
+             misurazione del tempo · Astrario · Cronometro
+ Misure e    marino · Meridiana · Clessidra (ad acqua) ·
+  standard   Orologio a incenso
+
+             Calendario · Giorno · Settimana · Mese · Anno
+              · Anno tropico · Giuliano · Gregoriano ·
+             Islamico
+
+             Intercalazione · Secondo intercalare · Anno
+             bisestile
+             Cronologia astronomica · Tempo geologico ·
+             Storia geologica · Geocronologia · Datazione
+ Cronologia  archeologica
+             Era del calendario · Anno di regno · Cronaca ·
+             Periodizzazione
+Religione e  Decani · Eone · Kairós · Kāla ·
+ mitologia   Kālacakratantra · Profezia · Ruota del tempo ·
+             Spirito del tempo · Tempo del Sogno            Chronos Saturnus -
+             Causalità · Endurantismo · Eternalismo ·       De Sphaera.png
+             Eterno ritorno · Evento · Finitismo temporale  Wooden hourglass
+ Filosofia    · L'irrealtà del tempo                        3.jpg
+             Quadridimensionalismo · Perdurantismo ·
+             Presentismo · Parti temporali · Sincronicità ·
+             Tempo storico
+             Tempo in fisica · Spaziotempo · Tempo assoluto
+              · Simmetria temporale
+
+             Freccia del tempo · Chronon · Quarta
+  Scienze    dimensione · Epoca di Planck · Tempo di Planck
+  fisiche     · Dominio del tempo · Dimensioni temporali
+             multiple
+
+             Teoria della relatività · Dilatazione del
+             tempo · Dilatazione gravitazionale del tempo ·
+             Tempo coordinato · Tempo proprio
+  Biologia   Cronobiologia · Ritmi circadiani
+ Psicologia  Cronometria mentale · Tempo di reazione ·
+             Senso del tempo · Presente specioso
+Sociologia e Futurologia · Long Now Foundation · Disciplina
+antropologia del tempo · Ricerca sull'uso del tempo
+  Scienze    Tempo newtoniano nelle scienze economiche ·
+ economiche  Valore tempo del denaro · Tempo bancario ·
+             Banca del tempo · Ora legale
+             Spazio · Durata · Capsula del tempo · Viaggio
+ Argomenti   nel tempo · Misura (musica) · Tempo di sistema
+ correlati    · Tempo metrico · Tempo esadecimale · Carpe
+             diem · Tempus fugit · Ora legale
+
+                                   V · D · M
+                             Cronologia universale
+ Divisioni   Settimana · Mese · Mese sinodico · Anno lunare · Anno ordinario ·
+ temporali   Anno bisestile · Octaeteride · Ciclo metonico · Ciclo callippico ·
+calendariali
+              Tipologie   Calendario · Lunare · Solare · Lunisolare ·
+                          Calendario delle settimane · Calendario pentecontale
+             Pre-giuliano Calendario romano o pre-giuliano · Calendario
+              e giuliano  giuliano · Calendario giuliano prolettico · Ciclo
+                          solare · Lettera dominicale
+              Gregoriano  Gregoriano · Gregoriano prolettico · Formato della
+                          data per stato · Date Old Style e New Style
+ Calendari    In base ai  Calendario cinese · Calendario giapponese ·
+               nomi di    Calendario coreano · Calendario vietnamita ·
+               civiltà    Calendario ebraico · Calendario islamico · Calendario
+                          maya
+                          ISO 8601 · Calendario rivoluzionario francese ·
+                Altri     Calendario rivoluzionario sovietico · Ciclo
+                          sessagesimale · Calendario geologico
+
+                         Anno Mundi · Epoca bizantina · Ab incarnatione · Ab
+               In base   Urbe condita · Era seleucide · Anno Domini · Era
+             alle epoche volgare · Era ispanica · Before Present · Era
+Ere e stili              olocenica · Islamica · Egizia · Ciclo Sotiaco · Hindu
+di datazione             Yuga
+             Per eponimi Anni consolari · Canone di Tolomeo · Libri dei Re ·
+             o per anni  Limmu · Dinastia seleucide · Ere della Cina · Ere del
+              di regno   Giappone
+
+   Tempo     Tempo · Effemeridi · Datazione astronomica · Anno galattico · Anno
+astronomico  platonico · Cicli di Milanković · Calendario cosmico
+             Concetti  Tempo profondo · Storia geologica della terra · Scala
+                       dei tempi geologici
+             Standards Età stratigrafiche globali standard (sigla GSSA) ·
+   Tempo               Sezioni e punti stratigrafici globali (sigla GSSP)
+ geologico             Cronostratigrafia · Periodo (geocronologia) · Età
+              Metodi   (geocronologia) · Geochimica isotopica · Legge della
+                       sovrapposizione · Samario-neodimio · Termoluminescenza
+
+                       Racemizzazione degli amminoacidi · Archeomagnetismo ·
+                       Dendrocronologia · Glottocronologia · Carota di ghiaccio
+             Datazione  · Lichenometria · Paleomagnetismo · Datazione al
+             assoluta  radiocarbonio · Datazione radiometrica · Tefrocronologia
+   Metodi               · Datazione a termoluminescenza · Datazione
+archeologici           uranio-piombo
+             Datazione Metodo di assorbimento del fluoro · Idratazione
+             relativa  dell'ossidiana · Seriazione cronologica · Stratigrafia
+                       (archeologia)
+
+   Metodo    Orologio molecolare
+  genetico
+ Argomenti   Cronaca (genere letterario) · Nuova cronologia · Periodizzazione ·
+ correlati   Synchronoptic view · Anno 0 · Terminus post quem · Cronologia
+             ASPRO
+    Basi     Astronomia · Geologia · Paleontologia · Archeologia · Storia
+cronologiche
+
+   Controllo di    LCCN (EN) sh85018840 · GND (DE) 4318310-4 · BNF (FR) 
+     autorità      cb11952376f (data)
+
+Antica Roma Portale Antica Roma: accedi alle voci di Wikipedia che trattano di
+Antica Roma
+
+*
+Estratto da "https://it.wikipedia.org/w/index.php?title=Calendario_giuliano&
+oldid=106242869"
+Categorie:
+
+  • Calendari
+  • Usi e costumi dell'antica Roma
+  • Gaio Giulio Cesare
+
+Categorie nascoste:
+
+  • Senza fonti - storia antica
+  • Senza fonti - novembre 2011
+  • P1417 letta da Wikidata
+  • Voci con codice LCCN
+  • Voci con codice GND
+  • Voci con codice BNF
+  • Voci non biografiche con codici di controllo di autorità
+
+Menu di navigazione
+
+Strumenti personali
+
+  • Accesso non effettuato
+  • discussioni
+  • contributi
+  • registrati
+  • entra
+
+Namespace
+
+  • Voce
+  • Discussione
+
+[ ]
+
+Varianti
+
+Visite
+
+  • Leggi
+  • Modifica
+  • Modifica wikitesto
+  • Cronologia
+
+[ ]
+
+Altro
+
+Ricerca
+
+[                    ][Ricerca][Vai]
+ 
+
+Navigazione
+
+  • Pagina principale
+  • Ultime modifiche
+  • Una voce a caso
+  • Nelle vicinanze
+  • Vetrina
+  • Aiuto
+  • Sportello informazioni
+
+Comunità
+
+  • Portale Comunità
+  • Bar
+  • Il Wikipediano
+  • Fai una donazione
+  • Contatti
+
+Strumenti
+
+  • Puntano qui
+  • Modifiche correlate
+  • Pagine speciali
+  • Link permanente
+  • Informazioni pagina
+  • Elemento Wikidata
+  • Cita questa voce
+
+In altri progetti
+
+  • Wikimedia Commons
+
+Stampa/esporta
+
+  • Crea un libro
+  • Scarica come PDF
+  • Versione stampabile
+
+In altre lingue
+
+  • Afrikaans
+  • Alemannisch
+  • العربية
+  • ܐܪܡܝܐ
+  • مصرى
+  • Asturianu
+  • Azərbaycanca
+  • Башҡортса
+  • Boarisch
+  • Беларуская
+  • Беларуская (тарашкевіца)‎
+  • Български
+  • বাংলা
+  • Brezhoneg
+  • Bosanski
+  • Català
+  • Нохчийн
+  • Cebuano
+  • Čeština
+  • Чӑвашла
+  • Cymraeg
+  • Dansk
+  • Deutsch
+  • Ελληνικά
+  • English
+  • Esperanto
+  • Español
+  • Eesti
+  • Euskara
+  • فارسی
+  • Suomi
+  • Føroyskt
+  • Français
+  • Nordfriisk
+  • Frysk
+  • Gaeilge
+  • Gàidhlig
+  • Galego
+  • עברית
+  • हिन्दी
+  • Hrvatski
+  • Kreyòl ayisyen
+  • Magyar
+  • Հայերեն
+  • Bahasa Indonesia
+  • Ilokano
+  • ГӀалгӀай
+  • Ido
+  • Íslenska
+  • 日本語
+  • Jawa
+  • ქართული
+  • Қазақша
+  • 한국어
+  • Къарачай-малкъар
+  • Kurdî
+  • Kernowek
+  • Latina
+  • Lëtzebuergesch
+  • Limburgs
+  • Ligure
+  • Lietuvių
+  • Latviešu
+  • मैथिली
+  • Malagasy
+  • Македонски
+  • मराठी
+  • Bahasa Melayu
+  • Nederlands
+  • Norsk nynorsk
+  • Norsk
+  • Occitan
+  • ਪੰਜਾਬੀ
+  • Polski
+  • Português
+  • Runa Simi
+  • Română
+  • Русский
+  • Русиньскый
+  • Саха тыла
+  • Sardu
+  • Scots
+  • Srpskohrvatski / српскохрватски
+  • සිංහල
+  • Simple English
+  • Slovenčina
+  • Slovenščina
+  • Shqip
+  • Српски / srpski
+  • Svenska
+  • Kiswahili
+  • தமிழ்
+  • ไทย
+  • Tagalog
+  • Türkçe
+  • ئۇيغۇرچە / Uyghurche
+  • Українська
+  • اردو
+  • Oʻzbekcha/ўзбекча
+  • Tiếng Việt
+  • Winaray
+  • 吴语
+  • მარგალური
+  • ייִדיש
+  • 中文
+  • Bân-lâm-gú
+  • 粵語
+
+Modifica collegamenti
+
+  • Questa pagina è stata modificata per l'ultima volta il 1 lug 2019 alle
+    21:56.
+  • Il testo è disponibile secondo la licenza Creative Commons
+    Attribuzione-Condividi allo stesso modo; possono applicarsi condizioni
+    ulteriori. Vedi le condizioni d'uso per i dettagli.
+
+  • Informativa sulla privacy
+  • Informazioni su Wikipedia
+  • Avvertenze
+  • Sviluppatori
+  • Dichiarazione sui cookie
+  • Versione mobile
+
+  • Wikimedia Foundation
+  • Powered by MediaWiki
+

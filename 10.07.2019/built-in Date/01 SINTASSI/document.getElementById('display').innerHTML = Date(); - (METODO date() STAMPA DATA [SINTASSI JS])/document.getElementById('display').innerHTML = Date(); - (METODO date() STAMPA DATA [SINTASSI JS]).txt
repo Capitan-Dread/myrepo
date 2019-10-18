@@ -1,0 +1,28 @@
+
+[SINTASSI GENERICA]
+
+//OUTPUT : Wed Jul 10 2019 09:58:02 GMT+0200 (Ora legale dell’Europa centrale)
+document.getElementById('display').innerHTML = Date();
+
+--------------------------------------------------------------------------
+
+
+[ESEMPIO PRATICO]
+
+
+<!DOCTYPE html>
+<html>
+<head><title> Esercizio </title></head>
+<body>
+
+<p id="display"> Esempio </p>
+
+<script>
+
+//OUTPUT : Wed Jul 10 2019 09:58:02 GMT+0200 (Ora legale dell’Europa centrale)
+document.getElementById('display').innerHTML = Date();
+
+</script>
+
+</body>
+</html>

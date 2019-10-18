@@ -1,0 +1,225 @@
+
+https://www.agenziaentrate.gov.it/wps/content/Nsilib/Nsi/Servizi/ServiziTrasversali/Altri/Sid2/Modalita+trasmissione+SID/Trasmissione+via+FTP/Modalita+colloquio+piattaforma+FTP/?page=servizitrasversali
+
+--------------------------------------------------------------------------
+
+
+
+
+
+                    Modalità di colloquio piattaforma FTP
+
+
+
+
+In caso di utilizzo del canale FTP, le cui specifiche tecniche sono riportate nelle Modalità di colloquio piattaforma FTP, l’Ente Esterno deve esporre un proprio FTP Server e comunicare le relative credenziali d’accesso per essere raggiunto dal client FTP dell’Agenzia delle Entrate.
+
+In questo caso l’Agenzia delle Entrate opera in modalità client :
+
+prende in carico i flussi di dati provenienti dalla periferia che rispondono agli standard di nomenclatura prevista per ogni servizio e provvede alla loro cancellazione dal server come certificazione della corretta acquisizione. In questo modo l’utente può verificare l’effettiva presa in carico da parte dell’Agenzia dei flussi inoltrati a fronte della cancellazione dal proprio server FTP dei relativi file effettuata automaticamente dal SID al termine dell’operazione di prelievo
+invia in periferia i flussi di dati in uscita e come certificazione del corretto invio dei dati provvede al “Rename” del file spedito secondo la nomenclatura prevista per ogni specifico servizio.
+
+
+-------------------------------------------------------------------------
+
+
+L’interscambio dei dati con i soggetti esterni all’Agenzia delle Entrate
+avviene utilizzando un sistema di trasmissione dati tra terminali remoti basato
+su protocollo di colloquio “File Transfer Protocol (FTP)” su rete pubblica
+(Internet) o SPC infranet, mediante un server FTP (nodo).
+Il servizio di trasmissione e ricezione dati via FTP (Nativo e NON Cifrato come
+ad esempio SFTP) gestito dall’Agenzia delle Entrate è funzionante 24 ore al
+giorno, per tutti i giorni della settimana, comprese le festività.
+La modalità di scambio dati prevede che l’Agenzia delle Entrate operi sempre in
+modalità client; in particolare:
+l’Agenzia delle Entrate invia in periferia i flussi di dati in uscita e come
+certificazione del corretto invio dei dati provvederà al “Rename” del file
+spedito; l’Agenzia delle Entrate prende in carico i flussi di dati provenienti
+dalla periferia, provvedendo alla loro cancellazione dal server come
+certificazione della corretta acquisizione dei dati.
+L’Ente Esterno dovrà esporre un FTP Server e comunicare le sue credenziali
+d’accesso.
+
+Collegamento di Rete
+
+Per consentire ad Enti Esterni lo scambio massivo di dati con l’Agenzia delle
+Entrate, è stata predisposta una infrastruttura di accoglienza che utilizza il
+protocollo FTP su dorsali pubbliche (Internet e SPC Infranet) per realizzare lo
+scambio dati in oggetto.
+In particolare, la piattaforma utilizza un client FTP in grado di connettersi a
+server FTP esposti su Internet o su SPC Infranet, utilizzando le porte
+classiche 20 e 21, in modalità “active mode”.
+Per realizzare la connessione l’Ente Esterno deve quindi attestare ed esporre
+sulla dorsale pubblica un server FTP, in grado di essere raggiunto dal client
+FTP dell’Agenzia delle Entrate. In base a considerazioni proprie dell’Ente
+circa le policy di sicurezza da implementare sullo specifico scambio di dati
+massivo, l’Ente può decidere di utilizzare server condivisi con altre
+applicazioni, oppure server dedicati in maniera esclusiva a tale scambio.
+La scelta di utilizzare il protocollo FTP standard, evitando le varie
+implementazioni di protocolli ibridi con cifratura integrata (come FTPs, ovvero
+“FTP over SSL”, oppure sFTP, ovvero “FTP over SSH”), è giustificata dalle
+propedeutiche attività di cifratura e firma digitale dei file scambiati,
+attività che garantiscono riservatezza, autenticazione, integrità, e
+non-ripudio dei dati. La protezione del canale trasmissivo (su cui viaggiano in
+chiaro sia i parametri di apertura del canale stesso che i comandi ftp
+inoltrati) viene garantita invece dall’utilizzo della tecnologia VPN IPsec in
+modalità site-to-site, che crea un circuito privato virtuale sicuro attraverso
+le dorsali pubbliche.
+
+Ciascun Ente o Nodo dovrà configurare la propria VPN utilizzando apparati che
+supportino l’intera suite di protocolli IPsec, standard “de facto” per la
+realizzazione di VPN con caratteristiche avanzate. In particolare, gli apparati
+dovranno poter essere configurati in modo da implementare la modalità
+site-to-site.
+Gli apparati terminatori VPN con IPsec (o “IPsec peers”, situati nelle due sedi
+che devono attivare un tunnel per la cifratura dei pacchetti in transito), in
+fase di negoziazione delle Security Association si autenticheranno tramite PSK
+(pre-shared key, nota ad entrambi i gateway ed inserita nella sola fase di
+configurazione iniziale). Non è invece prevista una mutua autenticazione dei
+gateway tramite certificati.
+Tutti i parametri di configurazione del tunnel IPsec, in particolare i piani di
+indirizzamento privato con cui dovranno presentarsi i server FTP degli Enti o
+Nodi e quello utilizzato dal client FTP dell’Agenzia, saranno stabiliti
+dall’Agenzia delle Entrate e forniti ai tecnici incaricati della configurazione
+dell’apparato terminatore VPN presso l’Ente o Nodo.
+Sarà cura e responsabilità dell’Ente o Nodo individuare, utilizzare e
+configurare apparati terminatori VPN compatibili con gli analoghi apparati
+attestati in Agenzia, previo invio, tramite apposito modulo, delle informazioni
+inerenti l’apparato che si intende usare. Oltre ai nominativi dei referenti
+tecnici responsabili delle attività di configurazione e test, su tale modulo
+dovranno essere elencate le caratteristiche dell’apparato (marca, modello,
+release del firmware e/o versione del sistema operativo), oltre ai parametri di
+configurazione supportati e all’IP pubblico esposto dall’apparato. In base a
+tali informazioni, saranno successivamente concordati eventuali ottimizzazioni
+della configurazione, e potranno iniziare i test di connettività IPsec
+(negoziazione delle Security Association, instaurazione del canale cifrato,
+verifica della reciproca raggiungibilità TCP/IP).
+Una volta completati con successo i test di connettività IPsec tra gli apparati
+terminatori VPN, l’Agenzia considererà “validata” la relativa configurazione,
+che rimarrà congelata sugli apparati dell’Agenzia. Si richiede che, lato Ente o
+Nodo, si usi analoga accortezza per minimizzare eventuali problemi durante la
+fase di produzione. Si richiede inoltre che eventuali modifiche alla
+configurazione dell’apparato terminatore VPN presso l’Ente o Nodo vengano
+comunicate all’Agenzia, per poter innescare ulteriori fasi di test ed una nuova
+procedura di validazione del collegamento.
+Infine, per le Pubbliche Amministrazioni o Enti con esposizione su entrambe le
+dorsali pubbliche (SPC Infranet e Internet), ferme restando le indicazioni
+vigenti sull’utilizzo di SPC per le connessioni tra Pubbliche Amministrazioni,
+si sottolinea la necessità dell’utilizzo di piani di indirizzamento pubblici
+congruenti con i piani assegnati su SPC Infranet.
+Infatti, proprio perché l’infrastruttura consente l’utilizzo di entrambe le
+dorsali (Internet e SPC Infranet), occorre che, qualora si impieghi la dorsale
+Internet, si usino esclusivamente IP esterni al range SPC assegnato all’Ente
+stesso, onde evitare il routing asimmetrico (le risposte a pacchetti arrivati
+da Internet verrebbero inoltrate su SPC Infranet, con conseguente
+malfunzionamento dello scambio dati).
+
+Attivazione del nodo
+
+L’attivazione del nodo è subordinata alla verifica tecnico-funzionale ed alla
+conseguente certificazione rilasciata dal SID relativa al corretto
+funzionamento del colloquio tra i sistemi.
+In particolare dopo aver completato le prove di instaurazione della connessione
+VPN ed i test di raggiungibilità IP, si procederà ai test relativi alla
+funzionalità del canale FTP, con prove di scambio dati tra il client presso
+l’Agenzia ed il server FTP presso l’Ente o Nodo. In questa fase si
+verificheranno le corrette configurazioni di eventuali apparati di sicurezza
+(sonde IPS e firewall) che dovranno permettere il relativo traffico, e le
+eventuali funzionalità di NAT loro delegate. Il nodo verrà considerato attivato
+quando il client FTP dell’Agenzia sarà in grado di raggiungere il server FTP
+dell’Ente o Nodo, sarà autenticato ed autorizzato ad accedere alla directory
+dedicata all’Agenzia, potrà inoltrare i comandi necessari allo scambio dati e
+si potrà verificare il trasferimento corretto e completo di file anche di
+grandi dimensioni. Al termine di queste prove, effettuate con esito positivo,
+l’Agenzia delle Entrate validerà l’intera infrastruttura relativa al
+particolare Ente o Nodo.
+
+Comunicazione dati tecnici per l’Attivazione del nodo
+
+I dati tecnici necessari per l’instaurazione del collegamento del nodo, quali i
+piani di indirizzamento pubblici e privati utilizzati da server e client FTP, i
+parametri di configurazione del canale IPsec, i riferimenti dei tecnici
+responsabili delle attività di configurazione e test, saranno scambiati tramite
+moduli inviati per email.
+I dati di configurazione maggiormente sensibili (la PSK e le credenziali
+d’accesso al server FTP) saranno scambiati tra l’Ente e i referenti tecnici del
+SID in fase di predisposizione del collegamento, utilizzando una modalità
+sicura (busta sigillata e/o “de visu”). In tale fase saranno definite, altresì,
+le variabili previste negli standard di nomenclatura dei file da scambiare
+relative al Codice trasmissivo dall’Ente Esterno e al Codice flusso
+trasmissivo.
+Per la condivisione dei parametri di configurazione è necessario scarica il:
+
+ Modulo per la condivisione delle informazioni relative al collegamento VPN di
+Enti Esterni o Nodi con il SID
+
+Informazioni sul sito dell'Agenzia delle Entrate
+
+[AgenziaEnt]
+
+L'Agenzia
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Chi siamo
+  • Amministrazione trasparente
+  • Atti di notifica
+  • Accesso civico
+  • Vedi tutti i contenuti
+
+Servizi
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Correzione dati catastali
+  • Controllo partita Iva
+  • Archivio Vies
+  • Verifica glifo
+  • Vedi tutti i servizi
+
+Strumenti
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Software di compilazione
+  • Modelli
+  • Specifiche tecniche
+  • Codici tributo
+  • Vedi tutti gli strumenti
+
+Sede Legale
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Agenzia delle Entrate - via Giorgione n. 106, 00147 Roma
+Codice Fiscale e Partita Iva: 06363391001
+
+Contatti e assistenza
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Call center, web mail e prenotazione appuntamenti
+  • Siti regionali
+
+Seguici su
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Facebook
+  • Twitter
+  • Linkedin
+  • Youtube
+  • RSS
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Altre informazioni
+
+  • Link utili
+  • Archivio
+  • Privacy e note legali
+
+DCSIMG
+
+[matomo]
+

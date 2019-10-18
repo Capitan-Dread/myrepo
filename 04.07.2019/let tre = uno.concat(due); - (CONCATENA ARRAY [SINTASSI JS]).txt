@@ -1,0 +1,19 @@
+
+[SINTASSI GENERICA]
+
+let tre = uno.concat(due);
+
+---------------------------------------------------------------------------
+
+[ESEMPIO GENERICO]
+
+let uno = [34, 56];
+let due = [67, 89];
+let tre = uno.concat(due);
+alert(tre);
+
+---------------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+

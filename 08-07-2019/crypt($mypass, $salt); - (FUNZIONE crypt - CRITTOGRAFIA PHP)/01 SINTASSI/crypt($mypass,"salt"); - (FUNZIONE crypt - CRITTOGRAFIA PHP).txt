@@ -1,0 +1,23 @@
+
+[SINTASSI GENERICA]
+
+<?php
+
+$mypass = "stringa";
+$mycrypt = crypt($mypass,"salt");
+echo $mycrypt;
+
+?>
+
+------------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+
+<?php
+
+$mypass = "dracula";
+$mycrypt = crypt($mypass,"abc");
+echo $mycrypt;
+
+?>

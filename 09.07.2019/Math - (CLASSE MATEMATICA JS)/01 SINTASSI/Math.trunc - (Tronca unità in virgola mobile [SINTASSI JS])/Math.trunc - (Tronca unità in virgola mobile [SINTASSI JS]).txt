@@ -1,0 +1,11 @@
+
+[SINTASSI GENERICA]
+
+Math.trunc(7.8);
+
+---------------------------------------------------------------------------
+
+[ESEMPIO PRATICO]
+
+alert(Math.trunc(7.8)); //OUTPUT : 7
+alert(Math.trunc(-7.8)); //OUTPUT : -7

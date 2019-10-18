@@ -1,0 +1,331 @@
+
+https://www.mrwebmaster.it/javascript/espressioni-regolari_6838.html
+
+--------------------------------------------------------------------------
+
+
+
+
+
+                    Le espressioni regolari in Javascript
+
+
+
+
+Le regular expressions (espressioni regolari) sono un potente strumento per il
+controllo formale della sintassi di una stringa al fine di verificare che
+questa corrisponda ad un modello (pattern) predefinito.
+
+Le espressioni regolari sono una tecnica trasversale a quasi tutti i linguaggi
+di programmazione, tant'è che alcuni sono arrivati a definire questa tecnica
+come uno pseudo-linguaggio vero e proprio.
+
+La definizione di pattern richiede la conoscenza di una sintassi piuttosto
+complessa, abbastanza familiare, tuttavia, a coloro che conoscono il Perl. Pur
+avendo tratti comuni a vari linguaggi, le espressioni regolari variano a
+seconda del linguaggio utilizzato quindi modelli creati per PHP, ad esempio,
+non funzionano necessariamente in Javascript (seppur vi sia una grande
+somiglianza).
+
+Esempi di espressioni regolari utilizzate frequentemente
+
+Un classico esempio di controllo di espressione regolare è rappresentato dalla
+verifica della corretta formattazione sintattica dell'indirizzo email; tale
+verifica, in estrema sintesi, controlla che l'indirizzo sia composto da una
+username, seguito dalla chiocciola (@) e dal dominio del sito/provider.
+
+Continua dopo la pubblicità...
+
+username@dominio.ext
+
+Altro esempio di espressione regolare piuttosto utilizzata riguarda il
+controllo formale dell codice fiscale: questo è composto da 16 caratteri
+alfanumerici, in una sequenza "predefinita" del tipo:
+
+AAABBB12C21D345E
+
+Ovviamente ci sono molti altri esempi in cui è frequente ricorrere alle
+espressioni regolari per controllare una stringa, normalmente si tratta di
+esigenze di validazione di informazioni ricevute in input dagli utenti
+attraverso una querystring o un form.
+
+Dichiarare un'espressione regolare in Javascript
+
+Esistono due sistemi con cui è possibile dichiarare il pattern (sequenza di
+caratteri di controllo) di un'espressione regolare; il primo è attraverso una
+semplice stringa contenuta in una coppia di caratteri slash (/) ed il secondo
+attraverso l'oggetto RegExp.
+
+La sintassi attraverso la quale definire il pattern per un'espressione regolare
+è la seguente:
+
+var espressione = /pattern/;
+
+Vediamo un esempio di pattern per verificare che una stringa sia composta solo
+da caratteri alfabetici senza fare distinzione tra maiuscole e minuscole:
+
+var espressione = /^[a-z]+$/i;
+
+Vedremno più avanti in che modo è stato composto questo pattern, per ora
+limitiamoci ad osservare come questo sia racchiuso tra i caratteri di slash e
+che dopo lo slash di chiusura è stata aggiunta una "i".
+
+Questa lattera (i) è detta modificatore ed indica al nostro programma di
+effettuare una ricerca NON case sensitive (la "i" sta per ignore case), cioè di
+non fare differenze tra maiuscole e minuscole.
+
+I modificatori supportati sono tre:
+
+  • i - non distingue tra maiuscole e minuscole;
+  • g - esegue ricerche globali, cioè non si ferma alla prima occorrenza;
+  • m - esegue ricerche multiline (il pattern viene confrontato con ogni linea
+    del testo);
+
+Come detto esiste un secondo modo per la creazione di espressioni regolari e
+consiste nell'utilizzo dell'oggetto RegExp. Questo viene istanziato in una
+variabile un po' come accade per l'oggetto Date():
+
+var espressione = new RegExp('pattern');
+
+Volendo riprodurre l'esempio visto sopra avremmo scritto:
+
+var espressione = new RegExp('^[a-z]+$','i');
+
+Come vedete il pattern è il primo attributo atteso dal metodo mentre
+l'eventuale modificatore è il secondo.
+
+In sostanza non ci sono differenze tra questi due sistemi dichiarativi. Negli
+esempi che seguiranno, per semplicità, utilizzeremo il primo dei due sistemi
+descritti.
+
+Effettuare un controllo tramite espressione regolare: il metodo test()
+
+Per impostare il controllo di un'espressione regolare si utilizza il metodo
+test() dell'oggetto RegExp il quale restituirà true in caso di successo o false
+in caso contrario. Vediamo la sintasi:
+
+if (espressione.test(stringa))
+{
+  // "stringa" è conforme all'espressione
+}
+else
+{
+  // "stringa" NON è conforme all'espressione
+}
+
+Naturalmente possiamo impostare il controllo in modo inverso attraverso
+l'operatore logico di negazione. Se vogliamo che il nostro programma faccia
+qualcosa solo se l'espressione regolare non è verificata scriveremo così:
+
+if (!espressione.test(stringa))
+{
+  // avviso dell'errore...
+}
+
+il che equivale a:
+
+if (espressione.test(stringa) == false)
+{
+  // avviso dell'errore...
+}
+
+Vediamo un esempio concreto: supponiamo di voler verificare che l'username
+inserito dall'utente sia composto solo da letteri e numeri avvisandolo (con un
+alert) in caso di errore:
+
+// definisco in una variabile un username in modo arbitrario
+// nella realtà recupereremo questo valore da un campo input di un form
+var username = 'mario.rossi';
+
+// imposto un modello
+var re = /^[a-z0-9]+$/i;
+
+// faccio la verifica
+if (!re.test(username)) {
+  alert('Puoi inserire solo lettere e numeri!');
+}
+
+Estrarre le stringhe corrispondenti al pattern: il metodo exec()
+
+Se il metodo test() restuisce semplicemente true o false, il metodo exec()
+restuisce la stringa corrispondente al pattern (se trovata) oppure null (in
+caso di match non riuscito). Vediamo un esempio:
+
+// definisco una stringa
+var str = 'Mr.Webmaster';
+
+// definisco un semplice pattern per verificare
+// che la stringa inizi per "Mr"
+var re = /^Mr/;
+
+var res = re.exec(str);
+document.write(res);
+
+Questo esempio stamperà a video: Mr
+
+Costruire il pattern: la sintassi delle espressioni regolari
+
+Veniamo adesso alla parte più difficile dell'argomento espressioni regolari,
+ovvero la definizione dei pattern (sequenze di caratteri di controllo), dei
+costrutti sintattici e semantici.
+
+Una volta entrati nei vari meccanismi che regolano la definizione di
+un'espressione regolare, più o meno semplice o generica, risulterà molto
+semplice risolvere problemi apparentemente diffici, risolvibili altrimenti con
+lunghe routine di controllo attraverso il linguaggio di programmazione o di
+scripting utilizzato.
+
+Abbiamo già visto più sopra un esempio che verifica che una stringa sia
+composta esclusivamente da caratteri alfanumerici:
+
+var espressione = /^[a-z0-9]+$/i;
+
+Analizziamo la sintassi utilizzata all'interno di questa espressione regolare:
+
+  • ^ - indica che la stringa deve iniziare con...;
+  • [ e ] - indicano qualsiasi carattere tra quelli al loro interno;
+  • a-z e 0-9 - indica che la stringa può contenere tutti i caratteri che vanno
+    da "a" a "z" e da 0 a 9;
+  • + - indica che la stringa deve contenere almeno uno dei caratteri tra le
+    parentesi quadre;
+  • $ - indica il termine della stringa;
+
+Ipotiziamo che uno dei caratteri da controllare in un'espressione regolare sia,
+accidentalmente, un metacarattere delle espressioni regolari o altro carattere
+speciale (come ad esempio una parentesi quadra). Per farlo utilizzeremo il
+carattere back-slash (\) per isolarlo. Facciamo un esempio supponendo di dover
+verificare che una data stringa contenga il carattere "^":
+
+/\^/
+
+Se il carattere da controllare è proprio un back-slash, utilizzeremo un doppio
+back-slash:
+
+/\\/
+
+Il primo back-slash fungerà da literal escape ed il secondo verrà interpretato
+come carattere semplice e non come speciale.
+
+Passiamo a qualcosa di più complesso. Ipotizziamo di voler verificare che in
+una stringa sia presente il carattere punto che separi due blocchi
+alfanumerici. Ecco l'espressione regolare da utilizzare:>/p>
+
+var espressione = /^[a-z]+\.[a-z]/;
+var stringa = "mrwebmaster.it";
+if (!espressione.test(stringa))
+{
+  document.write("La stringa non è valida!");
+}
+
+Anche in questo caso abbiamo utilizzato un backslash in quanto il carattere
+punto (.) ha un valore "speciale" nella sintassi delle espressioni regolari e,
+se non preceduto da un backslash, euqivale a dire "qualsiasi carattere".
+
+Fino ad ora, nei pochi esempi trattati, abbiamo visto alcuni caratteri speciali
+ma in relatà ne esistono parecchi. Vediamo di seguito un riepilogo dei
+caratteri speciali, dei metacaratteri e delle strutture sintattiche utilizzati
+nelle espressioni regolari:
+
+Marcatori di inizio e termine stringa:
+
+  • ^ - verifica l'inizio di una stringa (attenzione! se utilizzato all'interno
+    di una parentesi quadra indica una negazione);
+  • $ - verifica la fine di una stringa;
+
+Metacaratteri:
+
+  • . - qualsiasi carattere ad esclusione del ritorno a capo;
+  • \w - verifica che una stringa sia alfanumerica, minuscola
+  • \W - verifica che una stringa sia alfanumerica, maiuscola
+  • \d - indica qualsiasi cifra numerica;
+  • \D - indica qualsiasi carattere che non sia una cifra numerica;
+  • \s - indica uno spazio vuoto;
+  • \S - indica qualsiasi carattere che non sia uno spazio vuoto;
+  • \t - indica una tabulazione;
+  • \r - indica un carriage return;
+  • \n - indica un linefeed;
+
+Parentesi quadre:
+
+  • [...] - le parentesi quadre identificano range e classi di caratteri;
+  • [abc] - identifica qualsiasi carattere tra quelli tra parentesi quadra;
+  • [^abc] - identifica qualsiasi carattere ad esclusione di quelli tra quelli
+    tra parentesi quadra (^ funge da negazione);
+  • [a-z] o [0-9] - il trattino all'interno della parentesi quadra identifica
+    un range di caratteri;
+
+Parentesi tonde:
+
+  • (...) - le parentesi tonde identificano dei gruppi di caratteri (i gruppi
+    diventamo fondamentali se si deve effettuare una sostituzione mediante
+    espressioni regolari);
+  • (a|b) - il simobolo | identifica un alternanza (o "a" o "b") all'interno
+    del gruppo;
+
+Ripetizioni di caratteri:
+
+  • {x} - indica il carattere precedente per x volte
+  • {x,} - indica il carattere precedente per x o più volte
+  • {x,y} - il carattere precedente si ripetere x volte ma non più di y
+  • ? - indica il carattere precedente per 0 o 1 occorrenza
+  • * - equivale a {0,}
+  • + - equivale a {1,}
+
+Usare le espressioni regolari per effettuare ricerche e sostituzioni
+
+Attraverso le espressioni regolari è possibile utilizzare anche i metodi search
+() e replace() tipici delle stringhe. Nella lezione successiva vedremo,
+appunto, come manipolare le stringhe attraverso i metodi e le proprietà ad esse
+associate.
+
+Sfoglia le lezioni
+
+← Funzioni native per la gestione delle stringhe
+→ Manipolare i cookie
+
+Ti potrebbero interessare...
+
+Commenti
+
+I commenti sono sottoposti alle linee guida di moderazione e prima di essere
+visibili devono essere approvati da un moderatore.
+
+  • Facebook
+  • Twitter
+  • YouTube
+  • Feed RSS
+
+Frequenta i nostri corsi
+
+  • Corso AJAXCorso AJAX
+    Applicazioni Web 2.0 basate su AJAX con ASP, ASP.NET e PHP. A partire da 39
+    €
+  • Corso JavascriptCorso Javascript
+    Creare pagine web ed interfacce utente interattive. A partire da 39 €
+  • Corso jQueryCorso jQuery
+    Creare applicazioni client-side col Framework jQuery. A partire da 39 €
+
+Vedi anche...
+
+  • Gestire gli oggetti con Javascript
+  • Creare, leggere e cancellare un cookie con Javascript
+  • I commenti in Javascript
+  • Le costanti in Javascript
+  • L'operatore ternario di Javascript
+
+Mr. Webmaster
+
+  • RSS
+  • Contattaci
+  • Torna su
+
+IKIweb
+© 2003 - 2019 Mr. Webmaster
+Mr. Webmaster ® è un marchio registrato.
+E' vietata ogni forma di riproduzione.
+IKIweb Internet Media S.r.l. - P.IVA 02848390122
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Parliamo di noi: chi siamo / cronologia
+Contatti: pubblicità / contattaci / segnala abusi
+Note Legali: condizioni d'uso / privacy / cookie
+Altro: sondaggi / feed

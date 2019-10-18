@@ -1,0 +1,44 @@
+
+https://www.php.net/manual/en/function.feof.php
+
+-------------------------------------------------------------------------
+
+feof
+
+<?php
+
+function safe_feof($fp, &$start = NULL) {
+ $start = microtime(true);
+
+ return feof($fp);
+}
+
+/* Assuming $fp is previously opened by fsockopen() */
+
+$start = NULL;
+$timeout = ini_get('default_socket_timeout');
+
+while(!safe_feof($fp, $start) && (microtime(true) - $start) < $timeout)
+{
+ /* Handle */
+}
+
+?>
+
+avvertimento Se il puntatore del file passato non è valido, si può ottenere un ciclo infinito, perché feof () non restituisce VERO. Esempio di esempio # 2 feof () con un puntatore di file non valido
+
+Example #2 feof() example with an invalid file pointer
+
+<?php
+// if file can not be read or doesn't exist fopen function returns FALSE
+$file = @fopen("no_such_file", "r");
+
+// FALSE from fopen will issue warning and result in infinite loop here
+while (!feof($file)) {
+}
+
+fclose($file);
+
+?>
+
+Ho davvero pensato che il feof () fosse TRUE quando il puntatore del file logico è un EOF. ma no ! abbiamo bisogno di leggere e ottenere un record vuoto prima che i rapporti eof () VERO.
